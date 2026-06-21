@@ -28,3 +28,6 @@ Thumbs.db
 # Google API temporary token credentials
 token.json
 credentials.json
+
+# Large PDFs in Study Material
+Study Material/*.pdf

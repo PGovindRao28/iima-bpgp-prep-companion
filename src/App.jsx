@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import studyMaterial from './data/study_material.json';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -28,6 +29,19 @@ export default function App() {
   const [mockExamType, setMockExamType] = useState('CAT');
   const [mockScoreVal, setMockScoreVal] = useState('');
   const [mockNotes, setMockNotes] = useState('');
+
+  // Study Material UI States
+  const [selectedDay, setSelectedDay] = useState(1);
+  const [selectedPracticeTab, setSelectedPracticeTab] = useState('guided');
+  const [selectedTopicSubTab, setSelectedTopicSubTab] = useState('verbal');
+  
+  // Search & Pagination States
+  const [testSearch, setTestSearch] = useState('');
+  const [mockSearch, setMockSearch] = useState('');
+  const [verbalLimit, setVerbalLimit] = useState(16);
+  const [dilrLimit, setDilrLimit] = useState(16);
+  const [quantLimit, setQuantLimit] = useState(16);
+  const [mockLimit, setMockLimit] = useState(10);
 
   const chatEndRef = useRef(null);
 
@@ -109,17 +123,15 @@ export default function App() {
   };
 
   // Helper to calculate preparation progress
-  const totalTasks = 7 * 23; // 7 tasks per week * 23 weeks approx
   const completedTasksCount = Object.values(checkedTasks).filter(Boolean).length;
-  const progressPercent = Math.min(Math.round((completedTasksCount / 35) * 100), 100); // normalized target for visual feedback
+  // Let's count completion based on 50 days (user completing 50 days worth of tasks)
+  const progressPercent = Math.min(Math.round((completedTasksCount / 100) * 100), 100);
 
   // Formatting Helper for chatbot markdown responses
   const renderFormattedText = (text) => {
     return text.split('\n').map((line, lineIdx) => {
       let content = line;
-      // Bold rendering
       content = content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-      // Inline code rendering
       content = content.replace(/`(.*?)`/g, '<code>$1</code>');
       
       if (line.startsWith('- ') || line.startsWith('* ')) {
@@ -134,6 +146,30 @@ export default function App() {
       return <p key={lineIdx} style={{ marginBottom: '0.5rem' }} dangerouslySetInnerHTML={{ __html: content }} />;
     });
   };
+
+  // Filter handlers for Topic Wise Tests
+  const filteredVerbalTests = studyMaterial.topicWiseTests.verbal.filter(t => 
+    t.name.toLowerCase().includes(testSearch.toLowerCase())
+  );
+  const filteredDilrTests = studyMaterial.topicWiseTests.dilr.filter(t => 
+    t.name.toLowerCase().includes(testSearch.toLowerCase())
+  );
+  const filteredQuantTests = studyMaterial.topicWiseTests.quant.filter(t => 
+    t.name.toLowerCase().includes(testSearch.toLowerCase())
+  );
+
+  // Filter handlers for Mini Mocks
+  const filteredMocks = studyMaterial.miniMocks.filter(m => 
+    m.name.toLowerCase().includes(mockSearch.toLowerCase()) ||
+    (m.va && m.va.toLowerCase().includes(mockSearch.toLowerCase())) ||
+    (m.qa && m.qa.toLowerCase().includes(mockSearch.toLowerCase())) ||
+    (m.lrdi && m.lrdi.text.toLowerCase().includes(mockSearch.toLowerCase()))
+  );
+
+  // Get active day object
+  const currentDayObj = studyMaterial.days.find(d => 
+    parseInt(d.day.replace('Day', '').strip) === selectedDay 
+  ) || studyMaterial.days[selectedDay - 1] || studyMaterial.days[0];
 
   return (
     <div className="app-container">
@@ -151,6 +187,14 @@ export default function App() {
               onClick={() => setActiveTab('dashboard')}
             >
               <span>📊</span> Dashboard
+            </button>
+          </li>
+          <li className="nav-item">
+            <button 
+              className={`nav-link ${activeTab === 'practice' ? 'active' : ''}`}
+              onClick={() => setActiveTab('practice')}
+            >
+              <span>📚</span> Study Material
             </button>
           </li>
           <li className="nav-item">
@@ -189,19 +233,70 @@ export default function App() {
             </div>
 
             <div className="grid-dashboard">
-              {/* Left Column: Progress, Weekly Tasks & Study Phases */}
+              {/* Left Column: Progress, Weekly Tasks & Study Resources */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                 {/* Visual Progress Bar */}
                 <section className="card">
                   <h2>Preparation Completion</h2>
                   <div className="progress-container">
                     <div className="progress-header">
-                      <span className="text-secondary">Milestone Checkpoints Completed</span>
+                      <span className="text-secondary">Study Tasks Completed</span>
                       <span className="text-accent" style={{ fontWeight: 'bold' }}>{progressPercent}%</span>
                     </div>
                     <div className="progress-bar-bg">
                       <div className="progress-bar-fill" style={{ width: `${progressPercent}%` }}></div>
                     </div>
+                  </div>
+                </section>
+
+                {/* Important Links & Community channels */}
+                <section className="card">
+                  <h2>Reference Resources & Handbooks</h2>
+                  <p className="text-secondary mb-3">Core guides, shortcut sheets, and community links trimmed of advertisement.</p>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                    {studyMaterial.communityLinks.map((link, idx) => (
+                      <a 
+                        key={idx}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="checklist-item"
+                        style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.75rem' }}
+                      >
+                        <span style={{ fontSize: '1.25rem' }}>
+                          {link.title.includes('Telegram') ? '💬' : 
+                           link.title.includes('WhatsApp') ? '🟢' : 
+                           link.title.includes('Formula') ? '📙' : '📘'}
+                        </span>
+                        <div>
+                          <strong className="text-accent" style={{ fontSize: '0.85rem', display: 'block' }}>{link.title}</strong>
+                          <span className="text-muted" style={{ fontSize: '0.75rem' }}>Open link ➔</span>
+                        </div>
+                      </a>
+                    ))}
+                    {/* PDF local references */}
+                    <a 
+                      href="file:///d:/IIM A/Study Material/GDPI-Handbook.pdf" 
+                      className="checklist-item" 
+                      style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.75rem' }}
+                    >
+                      <span style={{ fontSize: '1.25rem' }}>💼</span>
+                      <div>
+                        <strong className="text-accent" style={{ fontSize: '0.85rem', display: 'block' }}>GDPI Handbook</strong>
+                        <span className="text-muted" style={{ fontSize: '0.75rem' }}>Local PDF Handbook ➔</span>
+                      </div>
+                    </a>
+                    <a 
+                      href="file:///d:/IIM A/Study Material/All-Geometery-Shortcuts-by-Quantifiers-CAT-Academy.pdf" 
+                      className="checklist-item" 
+                      style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.75rem' }}
+                    >
+                      <span style={{ fontSize: '1.25rem' }}>📐</span>
+                      <div>
+                        <strong className="text-accent" style={{ fontSize: '0.85rem', display: 'block' }}>Geometry Shortcuts</strong>
+                        <span className="text-muted" style={{ fontSize: '0.75rem' }}>Formula Sheets ➔</span>
+                      </div>
+                    </a>
                   </div>
                 </section>
 
@@ -362,6 +457,412 @@ export default function App() {
                 </section>
               </div>
             </div>
+          </div>
+        )}
+
+        {activeTab === 'practice' && (
+          <div>
+            <div className="content-header">
+              <div>
+                <h1>Study Material & Lecture Hub</h1>
+                <p className="header-subtitle">Access structured lessons, practice sets, topic tests, and mini mocks extracted from your course documents.</p>
+              </div>
+            </div>
+
+            {/* Sub-Navigation Tabs */}
+            <div className="sub-nav">
+              <button 
+                className={`sub-nav-btn ${selectedPracticeTab === 'guided' ? 'active' : ''}`}
+                onClick={() => setSelectedPracticeTab('guided')}
+              >
+                📅 50-Day Prep Plan
+              </button>
+              <button 
+                className={`sub-nav-btn ${selectedPracticeTab === 'topicwise' ? 'active' : ''}`}
+                onClick={() => setSelectedPracticeTab('topicwise')}
+              >
+                🔬 Topic-Wise Tests
+              </button>
+              <button 
+                className={`sub-nav-btn ${selectedPracticeTab === 'mocks' ? 'active' : ''}`}
+                onClick={() => setSelectedPracticeTab('mocks')}
+              >
+                🏆 Mini Mocks & Sectionals
+              </button>
+            </div>
+
+            {/* TAB 1: 50-Day Prep Plan */}
+            {selectedPracticeTab === 'guided' && (
+              <div>
+                <p className="text-secondary mb-3">Select a day from the 50-day structured roadmap to access videos, worksheets, and online tests.</p>
+                
+                {/* Day Selection Grid */}
+                <div className="day-grid">
+                  {studyMaterial.days.map((d, index) => {
+                    const dNum = index + 1;
+                    return (
+                      <button 
+                        key={d.day}
+                        onClick={() => setSelectedDay(dNum)}
+                        className={`day-btn ${selectedDay === dNum ? 'active' : ''}`}
+                      >
+                        {dNum}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {/* Day Tasks Display */}
+                <div className="card">
+                  <div style={{ display: 'flex', justifyContent: 'between', alignItems: 'center', marginBottom: '1.5rem', borderBottom: '1px solid var(--border-light)', paddingBottom: '1rem' }}>
+                    <div>
+                      <h2 style={{ marginBottom: '0.25rem' }}>{currentDayObj.day} — {currentDayObj.topic || 'General Revision'}</h2>
+                      <span className="text-muted" style={{ fontSize: '0.85rem' }}>Structured syllabus targets for this study block</span>
+                    </div>
+                  </div>
+
+                  <div className="resource-section">
+                    {/* QA Tasks */}
+                    {currentDayObj.quant && currentDayObj.quant.length > 0 && (
+                      <div className="resource-category-card">
+                        <div className="section-title-bar">
+                          <span className="section-tag-name">Quantitative Ability (QA)</span>
+                        </div>
+                        <div className="resource-item-list">
+                          {currentDayObj.quant.map((task, idx) => {
+                            const taskKey = `day_${selectedDay}_qa_${idx}`;
+                            return (
+                              <div key={idx} className="resource-item">
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer' }} onClick={() => handleTaskToggle(taskKey)}>
+                                  <div className={`checkbox-custom ${checkedTasks[taskKey] ? 'checked' : ''}`} style={{ flexShrink: 0 }}></div>
+                                  <span style={{ textDecoration: checkedTasks[taskKey] ? 'line-through' : 'none', opacity: checkedTasks[taskKey] ? 0.6 : 1 }}>{task.text}</span>
+                                </div>
+                                {task.url && (
+                                  <a href={task.url} target="_blank" rel="noopener noreferrer" className="link-icon-btn">
+                                    🎥 Lecture URL
+                                  </a>
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* DILR Plan A */}
+                    {currentDayObj.dilrPlanA && currentDayObj.dilrPlanA.length > 0 && (
+                      <div className="resource-category-card">
+                        <div className="section-title-bar">
+                          <span className="section-tag-name">DILR Plan A</span>
+                        </div>
+                        <div className="resource-item-list">
+                          {currentDayObj.dilrPlanA.map((task, idx) => {
+                            const taskKey = `day_${selectedDay}_dilr_a_${idx}`;
+                            return (
+                              <div key={idx} className="resource-item">
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer' }} onClick={() => handleTaskToggle(taskKey)}>
+                                  <div className={`checkbox-custom ${checkedTasks[taskKey] ? 'checked' : ''}`} style={{ flexShrink: 0 }}></div>
+                                  <span style={{ textDecoration: checkedTasks[taskKey] ? 'line-through' : 'none', opacity: checkedTasks[taskKey] ? 0.6 : 1 }}>{task.text}</span>
+                                </div>
+                                {task.url && (
+                                  <a href={task.url} target="_blank" rel="noopener noreferrer" className="link-icon-btn">
+                                    📝 Solve Test
+                                  </a>
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* DILR Plan B */}
+                    {currentDayObj.dilrPlanB && currentDayObj.dilrPlanB.length > 0 && (
+                      <div className="resource-category-card">
+                        <div className="section-title-bar">
+                          <span className="section-tag-name">DILR Plan B</span>
+                        </div>
+                        <div className="resource-item-list">
+                          {currentDayObj.dilrPlanB.map((task, idx) => {
+                            const taskKey = `day_${selectedDay}_dilr_b_${idx}`;
+                            return (
+                              <div key={idx} className="resource-item">
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer' }} onClick={() => handleTaskToggle(taskKey)}>
+                                  <div className={`checkbox-custom ${checkedTasks[taskKey] ? 'checked' : ''}`} style={{ flexShrink: 0 }}></div>
+                                  <span style={{ textDecoration: checkedTasks[taskKey] ? 'line-through' : 'none', opacity: checkedTasks[taskKey] ? 0.6 : 1 }}>{task.text}</span>
+                                </div>
+                                {task.url && (
+                                  <a href={task.url} target="_blank" rel="noopener noreferrer" className="link-icon-btn">
+                                    🎥 Playlists
+                                  </a>
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* VA Plan A & B */}
+                    {((currentDayObj.vaPlanA && currentDayObj.vaPlanA.length > 0) || (currentDayObj.vaPlanB && currentDayObj.vaPlanB.length > 0)) && (
+                      <div className="resource-category-card">
+                        <div className="section-title-bar">
+                          <span className="section-tag-name">Verbal Ability (VA)</span>
+                        </div>
+                        <div className="resource-item-list">
+                          {currentDayObj.vaPlanA && currentDayObj.vaPlanA.map((task, idx) => {
+                            const taskKey = `day_${selectedDay}_va_a_${idx}`;
+                            return (
+                              <div key={idx} className="resource-item">
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer' }} onClick={() => handleTaskToggle(taskKey)}>
+                                  <div className={`checkbox-custom ${checkedTasks[taskKey] ? 'checked' : ''}`} style={{ flexShrink: 0 }}></div>
+                                  <span style={{ textDecoration: checkedTasks[taskKey] ? 'line-through' : 'none', opacity: checkedTasks[taskKey] ? 0.6 : 1 }}>{task.text}</span>
+                                </div>
+                                {task.url && (
+                                  <a href={task.url} target="_blank" rel="noopener noreferrer" className="link-icon-btn">
+                                    📝 Sectional
+                                  </a>
+                                )}
+                              </div>
+                            );
+                          })}
+                          {currentDayObj.vaPlanB && currentDayObj.vaPlanB.map((task, idx) => {
+                            const taskKey = `day_${selectedDay}_va_b_${idx}`;
+                            return (
+                              <div key={idx} className="resource-item">
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer' }} onClick={() => handleTaskToggle(taskKey)}>
+                                  <div className={`checkbox-custom ${checkedTasks[taskKey] ? 'checked' : ''}`} style={{ flexShrink: 0 }}></div>
+                                  <span style={{ textDecoration: checkedTasks[taskKey] ? 'line-through' : 'none', opacity: checkedTasks[taskKey] ? 0.6 : 1 }}>{task.text}</span>
+                                </div>
+                                {task.url && (
+                                  <a href={task.url} target="_blank" rel="noopener noreferrer" className="link-icon-btn">
+                                    🔗 Link
+                                  </a>
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Additional Practice */}
+                    {currentDayObj.additional && currentDayObj.additional.length > 0 && (
+                      <div className="resource-category-card">
+                        <div className="section-title-bar">
+                          <span className="section-tag-name">Additional Practice</span>
+                        </div>
+                        <div className="resource-item-list">
+                          {currentDayObj.additional.map((task, idx) => {
+                            const taskKey = `day_${selectedDay}_add_${idx}`;
+                            return (
+                              <div key={idx} className="resource-item">
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer' }} onClick={() => handleTaskToggle(taskKey)}>
+                                  <div className={`checkbox-custom ${checkedTasks[taskKey] ? 'checked' : ''}`} style={{ flexShrink: 0 }}></div>
+                                  <span style={{ textDecoration: checkedTasks[taskKey] ? 'line-through' : 'none', opacity: checkedTasks[taskKey] ? 0.6 : 1 }}>{task.text}</span>
+                                </div>
+                                {task.url && (
+                                  <a href={task.url} target="_blank" rel="noopener noreferrer" className="link-icon-btn">
+                                    🔗 Quiz Link
+                                  </a>
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* TAB 2: Topic Wise Tests */}
+            {selectedPracticeTab === 'topicwise' && (
+              <div>
+                <p className="text-secondary mb-3">Targeted conceptual testing covering English, Logic, and Mathematics topics.</p>
+                
+                {/* Search & Sub-tabs bar */}
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
+                  <div className="flex gap-1" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--border-light)', borderRadius: '10px', padding: '0.25rem' }}>
+                    <button 
+                      className={`sub-nav-btn ${selectedTopicSubTab === 'verbal' ? 'active' : ''}`}
+                      onClick={() => { setSelectedTopicSubTab('verbal'); setVerbalLimit(16); }}
+                      style={{ fontSize: '0.9rem', borderBottom: 'none', padding: '0.5rem 1rem', borderRadius: '8px' }}
+                    >
+                      Verbal ({filteredVerbalTests.length})
+                    </button>
+                    <button 
+                      className={`sub-nav-btn ${selectedTopicSubTab === 'dilr' ? 'active' : ''}`}
+                      onClick={() => { setSelectedTopicSubTab('dilr'); setDilrLimit(16); }}
+                      style={{ fontSize: '0.9rem', borderBottom: 'none', padding: '0.5rem 1rem', borderRadius: '8px' }}
+                    >
+                      DILR ({filteredDilrTests.length})
+                    </button>
+                    <button 
+                      className={`sub-nav-btn ${selectedTopicSubTab === 'quant' ? 'active' : ''}`}
+                      onClick={() => { setSelectedTopicSubTab('quant'); setQuantLimit(16); }}
+                      style={{ fontSize: '0.9rem', borderBottom: 'none', padding: '0.5rem 1rem', borderRadius: '8px' }}
+                    >
+                      Quant ({filteredQuantTests.length})
+                    </button>
+                  </div>
+                  
+                  <input 
+                    type="text" 
+                    placeholder={`Search ${selectedTopicSubTab} tests...`}
+                    value={testSearch}
+                    onChange={(e) => setTestSearch(e.target.value)}
+                    className="search-input"
+                    style={{ margin: 0, padding: '0.6rem 1rem', fontSize: '0.9rem', maxWidth: '300px' }}
+                  />
+                </div>
+
+                {/* Tests Display List */}
+                <div className="test-grid">
+                  {selectedTopicSubTab === 'verbal' && (
+                    filteredVerbalTests.slice(0, verbalLimit).map((test, idx) => (
+                      <div key={idx} className="test-card-simple">
+                        <div>
+                          <strong style={{ display: 'block', fontSize: '0.95rem' }}>{test.name}</strong>
+                          <span className="text-muted" style={{ fontSize: '0.75rem' }}>Topic: Vocabulary & Verbal Logic</span>
+                        </div>
+                        {test.url && (
+                          <a href={test.url} target="_blank" rel="noopener noreferrer" className="link-icon-btn">
+                            Solve Test
+                          </a>
+                        )}
+                      </div>
+                    ))
+                  )}
+                  
+                  {selectedTopicSubTab === 'dilr' && (
+                    filteredDilrTests.slice(0, dilrLimit).map((test, idx) => (
+                      <div key={idx} className="test-card-simple">
+                        <div>
+                          <strong style={{ display: 'block', fontSize: '0.95rem' }}>{test.name}</strong>
+                          <span className="text-muted" style={{ fontSize: '0.75rem' }}>Topic: Data Interpretation & Logic</span>
+                        </div>
+                        {test.url && (
+                          <a href={test.url} target="_blank" rel="noopener noreferrer" className="link-icon-btn">
+                            Solve Test
+                          </a>
+                        )}
+                      </div>
+                    ))
+                  )}
+
+                  {selectedTopicSubTab === 'quant' && (
+                    filteredQuantTests.slice(0, quantLimit).map((test, idx) => (
+                      <div key={idx} className="test-card-simple">
+                        <div>
+                          <strong style={{ display: 'block', fontSize: '0.95rem' }}>{test.name}</strong>
+                          <span className="text-muted" style={{ fontSize: '0.75rem' }}>Topic: Math & Quantitative Aptitude</span>
+                        </div>
+                        {test.url && (
+                          <a href={test.url} target="_blank" rel="noopener noreferrer" className="link-icon-btn">
+                            Solve Test
+                          </a>
+                        )}
+                      </div>
+                    ))
+                  )}
+                </div>
+
+                {/* Show More Pagination Button */}
+                {selectedTopicSubTab === 'verbal' && filteredVerbalTests.length > verbalLimit && (
+                  <button className="btn btn-secondary" onClick={() => setVerbalLimit(prev => prev + 16)} style={{ margin: '2rem auto 0 auto', display: 'block' }}>
+                    Show More Verbal Tests
+                  </button>
+                )}
+                {selectedTopicSubTab === 'dilr' && filteredDilrTests.length > dilrLimit && (
+                  <button className="btn btn-secondary" onClick={() => setDilrLimit(prev => prev + 16)} style={{ margin: '2rem auto 0 auto', display: 'block' }}>
+                    Show More DILR Tests
+                  </button>
+                )}
+                {selectedTopicSubTab === 'quant' && filteredQuantTests.length > quantLimit && (
+                  <button className="btn btn-secondary" onClick={() => setQuantLimit(prev => prev + 16)} style={{ margin: '2rem auto 0 auto', display: 'block' }}>
+                    Show More Quant Tests
+                  </button>
+                )}
+
+                {/* Empty State */}
+                {((selectedTopicSubTab === 'verbal' && filteredVerbalTests.length === 0) ||
+                  (selectedTopicSubTab === 'dilr' && filteredDilrTests.length === 0) ||
+                  (selectedTopicSubTab === 'quant' && filteredQuantTests.length === 0)) && (
+                  <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--text-muted)' }}>
+                    No topic tests found matching "{testSearch}".
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* TAB 3: Mini Mocks */}
+            {selectedPracticeTab === 'mocks' && (
+              <div>
+                <div style={{ display: 'flex', justifyBetween: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
+                  <p className="text-secondary" style={{ margin: 0 }}>Full sectional and mock sets with granular breakdowns.</p>
+                  <input 
+                    type="text" 
+                    placeholder="Search mocks by section or name..."
+                    value={mockSearch}
+                    onChange={(e) => setMockSearch(e.target.value)}
+                    className="search-input"
+                    style={{ margin: 0, padding: '0.6rem 1rem', fontSize: '0.9rem', maxWidth: '300px' }}
+                  />
+                </div>
+
+                <div className="test-grid">
+                  {filteredMocks.slice(0, mockLimit).map((mock, idx) => (
+                    <div key={idx} className="test-card-detailed">
+                      <div className="flex justify-between align-center">
+                        <h3 style={{ margin: 0, color: 'var(--accent-primary)' }}>{mock.name}</h3>
+                        <span className="text-muted" style={{ fontSize: '0.8rem' }}>{mock.overall}</span>
+                      </div>
+                      
+                      <div className="mock-specs-grid">
+                        <div className="spec-item">
+                          <strong style={{ display: 'block', color: 'var(--text-primary)' }}>Verbal</strong>
+                          {mock.va || 'NA'}
+                        </div>
+                        <div className="spec-item">
+                          <strong style={{ display: 'block', color: 'var(--text-primary)' }}>LRDI</strong>
+                          {mock.lrdi ? (
+                            mock.lrdi.url ? (
+                              <a href={mock.lrdi.url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-secondary)', textDecoration: 'none' }}>
+                                {mock.lrdi.text}
+                              </a>
+                            ) : mock.lrdi.text
+                          ) : 'NA'}
+                        </div>
+                        <div className="spec-item">
+                          <strong style={{ display: 'block', color: 'var(--text-primary)' }}>Quant</strong>
+                          {mock.qa || 'NA'}
+                        </div>
+                      </div>
+
+                      {mock.url && (
+                        <a href={mock.url} target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ textDecoration: 'none', display: 'flex', justifyContent: 'center', padding: '0.5rem' }}>
+                          📝 Start Practice Mock
+                        </a>
+                      )}
+                    </div>
+                  ))}
+                </div>
+
+                {filteredMocks.length > mockLimit && (
+                  <button className="btn btn-secondary" onClick={() => setMockLimit(prev => prev + 12)} style={{ margin: '2rem auto 0 auto', display: 'block' }}>
+                    Show More Mini Mocks
+                  </button>
+                )}
+
+                {filteredMocks.length === 0 && (
+                  <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--text-muted)' }}>
+                    No mini mocks found matching "{mockSearch}".
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         )}
 
