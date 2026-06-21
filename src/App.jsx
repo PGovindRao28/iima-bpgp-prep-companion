@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import studyMaterial from './data/study_material.json';
+import videoLectures from './data/video_lectures.json';
 
 const pdfLibrary = [
   {
@@ -94,6 +95,12 @@ export default function App() {
     return saved ? JSON.parse(saved) : {};
   });
 
+  // Watched Video Lectures State (Persisted in localStorage)
+  const [watchedVideos, setWatchedVideos] = useState(() => {
+    const saved = localStorage.getItem('iima_watched_videos');
+    return saved ? JSON.parse(saved) : {};
+  });
+
   // Mock Test Scores State (Persisted in localStorage)
   const [scores, setScores] = useState(() => {
     const saved = localStorage.getItem('iima_mock_scores');
@@ -112,6 +119,8 @@ export default function App() {
   const [testSearch, setTestSearch] = useState('');
   const [mockSearch, setMockSearch] = useState('');
   const [pdfSearch, setPdfSearch] = useState('');
+  const [lectureSearch, setLectureSearch] = useState('');
+  const [selectedLectureSection, setSelectedLectureSection] = useState('All');
   const [verbalLimit, setVerbalLimit] = useState(16);
   const [dilrLimit, setDilrLimit] = useState(16);
   const [quantLimit, setQuantLimit] = useState(16);
@@ -123,6 +132,11 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem('iima_checked_tasks', JSON.stringify(checkedTasks));
   }, [checkedTasks]);
+
+  // Sync watched videos to localStorage
+  useEffect(() => {
+    localStorage.setItem('iima_watched_videos', JSON.stringify(watchedVideos));
+  }, [watchedVideos]);
 
   // Sync scores to localStorage
   useEffect(() => {
@@ -138,6 +152,13 @@ export default function App() {
     setCheckedTasks(prev => ({
       ...prev,
       [taskKey]: !prev[taskKey]
+    }));
+  };
+
+  const handleVideoToggle = (videoKey) => {
+    setWatchedVideos(prev => ({
+      ...prev,
+      [videoKey]: !prev[videoKey]
     }));
   };
 
@@ -199,6 +220,43 @@ export default function App() {
   // Helper to calculate preparation progress
   const completedTasksCount = Object.values(checkedTasks).filter(Boolean).length;
   const progressPercent = Math.min(Math.round((completedTasksCount / 100) * 100), 100);
+
+  // Helper to calculate lecture progress
+  const totalLecturesCount = videoLectures.reduce((total, sec) => {
+    return total + sec.topics.reduce((subTotal, top) => subTotal + top.lectures.length, 0);
+  }, 0);
+  const watchedLecturesCount = Object.keys(watchedVideos).filter(key => watchedVideos[key]).length;
+  const watchedPercentage = totalLecturesCount > 0 ? Math.round((watchedLecturesCount / totalLecturesCount) * 100) : 0;
+
+  // Filtered lectures based on section and search query
+  const filteredLecturesData = videoLectures.map(sec => {
+    if (selectedLectureSection !== 'All' && sec.section !== selectedLectureSection) {
+      return null;
+    }
+    
+    const matchingTopics = sec.topics.map(top => {
+      const topicMatches = top.topic.toLowerCase().includes(lectureSearch.toLowerCase());
+      const matchingLecs = top.lectures.filter(lec => 
+        lec.name.toLowerCase().includes(lectureSearch.toLowerCase())
+      );
+      
+      if (topicMatches || matchingLecs.length > 0) {
+        return {
+          ...top,
+          lectures: matchingLecs.length > 0 ? matchingLecs : top.lectures
+        };
+      }
+      return null;
+    }).filter(Boolean);
+    
+    if (matchingTopics.length > 0) {
+      return {
+        ...sec,
+        topics: matchingTopics
+      };
+    }
+    return null;
+  }).filter(Boolean);
 
   // Formatting Helper for chatbot markdown responses
   const renderFormattedText = (text) => {
@@ -579,6 +637,12 @@ export default function App() {
                 onClick={() => setSelectedPracticeTab('library')}
               >
                 📂 Reference Library (PDFs)
+              </button>
+              <button 
+                className={`sub-nav-btn ${selectedPracticeTab === 'lectures' ? 'active' : ''}`}
+                onClick={() => setSelectedPracticeTab('lectures')}
+              >
+                🎥 Lecture Index
               </button>
             </div>
 
@@ -1003,6 +1067,120 @@ export default function App() {
                     No reference PDFs found matching "{pdfSearch}".
                   </div>
                 )}
+              </div>
+            )}
+
+            {/* TAB 5: Lecture Index */}
+            {selectedPracticeTab === 'lectures' && (
+              <div>
+                {/* Stats & Progress Card */}
+                <div className="card" style={{ marginBottom: '2rem', padding: '1.5rem', background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(168, 85, 247, 0.08) 100%)', border: '1px solid rgba(99, 102, 241, 0.2)' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '1rem' }}>
+                    <div>
+                      <h2 style={{ fontSize: '1.4rem', color: 'var(--text-primary)', marginBottom: '0.25rem' }}>🎥 Lecture Completion Tracker</h2>
+                      <p className="text-secondary" style={{ fontSize: '0.9rem', margin: 0 }}>Watch video lectures, tick them off, and track your syllabus coverage.</p>
+                    </div>
+                    <div style={{ textAlign: 'right' }}>
+                      <span style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--accent-primary)' }}>{watchedLecturesCount} / {totalLecturesCount}</span>
+                      <span className="text-muted" style={{ fontSize: '0.85rem', marginLeft: '0.35rem' }}>({watchedPercentage}% Done)</span>
+                    </div>
+                  </div>
+                  
+                  {/* Progress Bar Container */}
+                  <div style={{ width: '100%', height: '10px', background: 'rgba(255, 255, 255, 0.05)', borderRadius: '999px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                    <div style={{ width: `${watchedPercentage}%`, height: '100%', background: 'linear-gradient(90deg, var(--accent-primary) 0%, var(--accent-secondary) 100%)', borderRadius: '999px', transition: 'width 0.4s ease-out', boxShadow: '0 0 8px var(--accent-primary)' }}></div>
+                  </div>
+                </div>
+
+                {/* Filter and Search Bar */}
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', marginBottom: '2rem', flexWrap: 'wrap' }}>
+                  {/* Search Box */}
+                  <input 
+                    type="text" 
+                    placeholder="Search lectures or topics..."
+                    value={lectureSearch}
+                    onChange={(e) => setLectureSearch(e.target.value)}
+                    className="search-input"
+                    style={{ margin: 0, padding: '0.65rem 1.25rem', fontSize: '0.95rem', maxWidth: '320px' }}
+                  />
+
+                  {/* Horizontal Scrollable Pills */}
+                  <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', flexGrow: 1 }}>
+                    {['All', ...videoLectures.map(s => s.section)].map((sectionName) => (
+                      <button
+                        key={sectionName}
+                        onClick={() => setSelectedLectureSection(sectionName)}
+                        className={`sub-nav-btn ${selectedLectureSection === sectionName ? 'active' : ''}`}
+                        style={{
+                          fontSize: '0.85rem',
+                          padding: '0.4rem 0.9rem',
+                          borderRadius: '20px',
+                          border: '1px solid rgba(255, 255, 255, 0.1)',
+                          background: selectedLectureSection === sectionName ? 'rgba(99, 102, 241, 0.15)' : 'rgba(255, 255, 255, 0.02)',
+                          borderBottom: selectedLectureSection === sectionName ? '1px solid var(--accent-primary)' : '1px solid rgba(255, 255, 255, 0.1)',
+                          color: selectedLectureSection === sectionName ? 'var(--accent-primary)' : 'var(--text-secondary)'
+                        }}
+                      >
+                        {sectionName.replace('VARC - ', '').replace('DILR - ', '').replace('Quants - ', '')}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Lecture Sections Listing */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+                  {filteredLecturesData.map((section, sIdx) => (
+                    <div key={sIdx} className="resource-category-card" style={{ borderLeft: '4px solid var(--accent-primary)' }}>
+                      <div className="section-title-bar" style={{ borderLeft: 'none', paddingLeft: 0, marginBottom: '1.25rem' }}>
+                        <div>
+                          <span className="section-tag-name" style={{ fontSize: '1.1rem', color: 'var(--accent-primary)' }}>{section.section}</span>
+                          <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginLeft: '1rem', background: 'rgba(255, 255, 255, 0.05)', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>
+                            {section.category}
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Grid of Topics inside this section */}
+                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '1.25rem' }}>
+                        {section.topics.map((topic, tIdx) => (
+                          <div key={tIdx} style={{ background: 'rgba(0, 0, 0, 0.2)', padding: '1rem', borderRadius: '12px', border: '1px solid var(--border-light)' }}>
+                            <h3 style={{ fontSize: '0.95rem', color: 'var(--text-primary)', marginBottom: '0.75rem', borderBottom: '1px solid rgba(255, 255, 255, 0.05)', paddingBottom: '0.5rem' }}>
+                              {topic.topic}
+                            </h3>
+                            
+                            <div className="resource-item-list" style={{ gap: '0.5rem' }}>
+                              {topic.lectures.map((lecture, lIdx) => {
+                                const videoKey = `${section.section}-${topic.topic}-${lecture.name}`;
+                                const isWatched = !!watchedVideos[videoKey];
+                                return (
+                                  <div key={lIdx} className="resource-item" style={{ padding: '0.5rem 0.75rem', background: isWatched ? 'rgba(99, 102, 241, 0.05)' : 'rgba(0, 0, 0, 0.15)' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }} onClick={() => handleVideoToggle(videoKey)}>
+                                      <div className={`checkbox-custom ${isWatched ? 'checked' : ''}`} style={{ width: '16px', height: '16px', borderRadius: '4px', flexShrink: 0 }}></div>
+                                      <span style={{ fontSize: '0.85rem', textDecoration: isWatched ? 'line-through' : 'none', opacity: isWatched ? 0.6 : 1, color: isWatched ? 'var(--text-muted)' : 'var(--text-primary)' }}>
+                                        {lecture.name}
+                                      </span>
+                                    </div>
+                                    <a href={lecture.url} target="_blank" rel="noopener noreferrer" className="link-icon-btn" style={{ padding: '0.25rem 0.5rem', fontSize: '0.75rem', borderRadius: '4px' }}>
+                                      ▶️ Watch
+                                    </a>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+
+                  {filteredLecturesData.length === 0 && (
+                    <div style={{ textAlign: 'center', padding: '4rem 2rem', color: 'var(--text-muted)', background: 'rgba(255,255,255,0.01)', borderRadius: '16px', border: '1px dashed var(--border-light)' }}>
+                      <span style={{ fontSize: '2rem', display: 'block', marginBottom: '1rem' }}>🔍</span>
+                      <h3>No lectures found matching your criteria</h3>
+                      <p style={{ fontSize: '0.9rem', marginTop: '0.25rem' }}>Try clearing your search query or selecting a different section filter.</p>
+                    </div>
+                  )}
+                </div>
               </div>
             )}
           </div>

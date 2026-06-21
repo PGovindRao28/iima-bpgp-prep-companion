@@ -1,0 +1,2056 @@
+[
+  {
+    "section": "Quants - Ravi Prakash",
+    "category": "Quants",
+    "topics": [
+      {
+        "topic": "Arithmetic",
+        "lectures": [
+          {
+            "name": "Playlist",
+            "url": "https://www.youtube.com/playlist?list=PLG4bwc5fquzj0Rkn0DVWZP9FxF9iG7OgB"
+          }
+        ]
+      },
+      {
+        "topic": "Speed Math",
+        "lectures": [
+          {
+            "name": "SM 1",
+            "url": "https://www.youtube.com/watch?v=VT9-jeEmlJ8"
+          },
+          {
+            "name": "SM 2",
+            "url": "https://www.youtube.com/watch?v=45rr2MJmXfA"
+          },
+          {
+            "name": "SM 3",
+            "url": "https://www.youtube.com/watch?v=sMiFeodSLPU"
+          },
+          {
+            "name": "SM 4",
+            "url": "https://www.youtube.com/watch?v=y6IWvihLWws"
+          },
+          {
+            "name": "SM 5",
+            "url": "https://www.youtube.com/watch?v=CikoluNIjFY"
+          },
+          {
+            "name": "SM 6",
+            "url": "https://www.youtube.com/watch?v=H8ItErX0044"
+          }
+        ]
+      },
+      {
+        "topic": "Averages",
+        "lectures": [
+          {
+            "name": "AVG 1",
+            "url": "https://www.youtube.com/watch?v=TBhanaOLNvc"
+          },
+          {
+            "name": "AVG 2",
+            "url": "https://www.youtube.com/watch?v=q-ZUkah-xys"
+          },
+          {
+            "name": "AVG 3",
+            "url": "https://www.youtube.com/watch?v=lxCGzzUZBj8"
+          },
+          {
+            "name": "AVG 4",
+            "url": "https://www.youtube.com/watch?v=i3o8REcdEXQ"
+          }
+        ]
+      },
+      {
+        "topic": "Alligation & Mixtures",
+        "lectures": [
+          {
+            "name": "AM 1",
+            "url": "https://www.youtube.com/watch?v=3LmRyBpIhgQ"
+          },
+          {
+            "name": "AM 2",
+            "url": "https://www.youtube.com/watch?v=RVF9kKdJJE8"
+          },
+          {
+            "name": "AM 3",
+            "url": "https://www.youtube.com/watch?v=qQcGkxuf4ws"
+          },
+          {
+            "name": "AM 4",
+            "url": "https://www.youtube.com/watch?v=Y5OkBhdVDIk"
+          },
+          {
+            "name": "AM 5",
+            "url": "https://www.youtube.com/watch?v=1jONQi6zFcw"
+          },
+          {
+            "name": "AM 6",
+            "url": "https://www.youtube.com/watch?v=cCE1_cKXlsk"
+          }
+        ]
+      },
+      {
+        "topic": "Ratio",
+        "lectures": [
+          {
+            "name": "R1",
+            "url": "https://www.youtube.com/watch?v=ns_yVxRFmZw"
+          },
+          {
+            "name": "R2",
+            "url": "https://www.youtube.com/watch?v=pCBYFUpDduw"
+          },
+          {
+            "name": "R3",
+            "url": "https://www.youtube.com/watch?v=eruwLy2vGV4"
+          },
+          {
+            "name": "R4",
+            "url": "https://www.youtube.com/watch?v=lyU93VH81s8"
+          },
+          {
+            "name": "R5",
+            "url": "https://www.youtube.com/watch?v=a6VLSdHMjEk"
+          },
+          {
+            "name": "R6",
+            "url": "https://www.youtube.com/watch?v=dRrLKUiuoHc"
+          }
+        ]
+      },
+      {
+        "topic": "Proportion, Variation",
+        "lectures": [
+          {
+            "name": "PV 1",
+            "url": "https://www.youtube.com/watch?v=nkCvpSojMhI"
+          },
+          {
+            "name": "PV 2",
+            "url": "https://www.youtube.com/watch?v=yH3JaXo7RQA"
+          }
+        ]
+      },
+      {
+        "topic": "Percentages, Profit & Loss",
+        "lectures": [
+          {
+            "name": "PPL 1",
+            "url": "https://www.youtube.com/watch?v=x-k8iSNr85g"
+          },
+          {
+            "name": "PPL 2",
+            "url": "https://www.youtube.com/watch?v=lzI_bpPpezE"
+          },
+          {
+            "name": "PPL 3",
+            "url": "https://www.youtube.com/watch?v=3ox1DwbOOx0"
+          },
+          {
+            "name": "PPL 4",
+            "url": "https://www.youtube.com/watch?v=bigCbKeUPO4"
+          },
+          {
+            "name": "PPL 5",
+            "url": "https://www.youtube.com/watch?v=3Q6V7qVGReo"
+          },
+          {
+            "name": "PPL 6",
+            "url": "https://www.youtube.com/watch?v=xDU1mvVga_o"
+          },
+          {
+            "name": "PPL 7",
+            "url": "https://www.youtube.com/watch?v=czMjyZAy6Io"
+          },
+          {
+            "name": "PPL 8",
+            "url": "https://www.youtube.com/watch?v=QPk0yLakPQE"
+          }
+        ]
+      },
+      {
+        "topic": "Simple & Compund Interest",
+        "lectures": [
+          {
+            "name": "SCI 1",
+            "url": "https://www.youtube.com/watch?v=hvikOiSu_D4"
+          },
+          {
+            "name": "SCI 2",
+            "url": "https://www.youtube.com/watch?v=TG3M3QFyY0k"
+          },
+          {
+            "name": "SCI 3",
+            "url": "https://www.youtube.com/watch?v=CUy55eQjeqw"
+          },
+          {
+            "name": "SCI 4",
+            "url": "https://www.youtube.com/watch?v=h3kqTD6hwp8"
+          },
+          {
+            "name": "SCI 5",
+            "url": "https://www.youtube.com/watch?v=g0dQhbyZdeo"
+          },
+          {
+            "name": "SCI 6",
+            "url": "https://www.youtube.com/watch?v=NPvRXZ2-KwE"
+          }
+        ]
+      },
+      {
+        "topic": "Time & Work",
+        "lectures": [
+          {
+            "name": "TW 1",
+            "url": "https://www.youtube.com/watch?v=oApzHGJNx38"
+          },
+          {
+            "name": "TW 2",
+            "url": "https://www.youtube.com/watch?v=6IbA-nSj28g"
+          },
+          {
+            "name": "TW 3",
+            "url": "https://www.youtube.com/watch?v=MJIlrpc2oKc"
+          }
+        ]
+      },
+      {
+        "topic": "Time, Speed & Distance",
+        "lectures": [
+          {
+            "name": "TSD 1",
+            "url": "https://www.youtube.com/watch?v=CKiP208avbc"
+          },
+          {
+            "name": "TSD 2",
+            "url": "https://www.youtube.com/watch?v=PQvBSkJDF_E"
+          },
+          {
+            "name": "TSD 3",
+            "url": "https://www.youtube.com/watch?v=tLsP7smddvQ"
+          },
+          {
+            "name": "TSD 4",
+            "url": "https://www.youtube.com/watch?v=5EzNLs_jExs"
+          },
+          {
+            "name": "TSD 5",
+            "url": "https://www.youtube.com/watch?v=D6Xrdj_Eoj0"
+          },
+          {
+            "name": "TSD 6",
+            "url": "https://www.youtube.com/watch?v=PKBj39PP8DA"
+          },
+          {
+            "name": "TSD 7",
+            "url": "https://www.youtube.com/watch?v=yzLtv86sWgI"
+          },
+          {
+            "name": "TSD 8",
+            "url": "https://www.youtube.com/watch?v=RHflaojKVlI"
+          }
+        ]
+      },
+      {
+        "topic": "Boats & Streams",
+        "lectures": [
+          {
+            "name": "BS 1",
+            "url": "https://www.youtube.com/watch?v=vx3DfHuuY6Y"
+          },
+          {
+            "name": "BS 2",
+            "url": "https://www.youtube.com/watch?v=QEtURAyIdRY"
+          }
+        ]
+      },
+      {
+        "topic": "Relative Speed",
+        "lectures": [
+          {
+            "name": "RS 1",
+            "url": "https://www.youtube.com/watch?v=pRFl8NnqID8"
+          },
+          {
+            "name": "RS 2",
+            "url": "https://www.youtube.com/watch?v=pRFl8NnqID8"
+          },
+          {
+            "name": "RS 3",
+            "url": "https://www.youtube.com/watch?v=fniDbYcNYaI"
+          },
+          {
+            "name": "RS 4",
+            "url": "https://www.youtube.com/watch?v=tnZ6zfCHmAc"
+          },
+          {
+            "name": "RS 5",
+            "url": "https://www.youtube.com/watch?v=cWKD8HHunkM"
+          }
+        ]
+      },
+      {
+        "topic": "Linear Tracks",
+        "lectures": [
+          {
+            "name": "LT 1",
+            "url": "https://www.youtube.com/watch?v=nSctNv6Q3nA"
+          },
+          {
+            "name": "LT 2",
+            "url": "https://www.youtube.com/watch?v=rhqjhvFEmAo"
+          },
+          {
+            "name": "LT 3",
+            "url": "https://www.youtube.com/watch?v=XtgtOReqpng"
+          }
+        ]
+      },
+      {
+        "topic": "Circular Tracks",
+        "lectures": [
+          {
+            "name": "CT 1",
+            "url": "https://www.youtube.com/watch?v=rdleefuXHQk"
+          },
+          {
+            "name": "CT 2",
+            "url": "https://www.youtube.com/watch?v=hkNVVMX06FE"
+          },
+          {
+            "name": "CT 3",
+            "url": "https://www.youtube.com/watch?v=7-MKc9p6AwU"
+          }
+        ]
+      },
+      {
+        "topic": "Linear Races",
+        "lectures": [
+          {
+            "name": "LR 1",
+            "url": "https://www.youtube.com/watch?v=UMJ4X1LwYxQ"
+          },
+          {
+            "name": "LR 2",
+            "url": "https://www.youtube.com/watch?v=s9tyhivTaQM"
+          }
+        ]
+      },
+      {
+        "topic": "Clocks",
+        "lectures": [
+          {
+            "name": "C1",
+            "url": "https://www.youtube.com/watch?v=Rqj9wEc2SfA"
+          }
+        ]
+      },
+      {
+        "topic": "Algebra & Modern Math",
+        "lectures": [
+          {
+            "name": "Playlist",
+            "url": "https://www.youtube.com/playlist?list=PLG4bwc5fquzgkOZZOd21O_jm_YwRJQ8t3"
+          }
+        ]
+      },
+      {
+        "topic": "Simple Equations",
+        "lectures": [
+          {
+            "name": "SE 1",
+            "url": "https://www.youtube.com/watch?v=W6MKuAnB0h4"
+          },
+          {
+            "name": "SE 2",
+            "url": "https://www.youtube.com/watch?v=P-emknCdeZE"
+          },
+          {
+            "name": "SE 3",
+            "url": "https://www.youtube.com/watch?v=vrtKzaspVjs"
+          },
+          {
+            "name": "SE 4",
+            "url": "https://www.youtube.com/watch?v=hlEjsEVLkbg"
+          },
+          {
+            "name": "SE 5",
+            "url": "https://www.youtube.com/watch?v=9foBHml4Ls0"
+          },
+          {
+            "name": "SE 6",
+            "url": "https://www.youtube.com/watch?v=UkhgxUqT9qE"
+          }
+        ]
+      },
+      {
+        "topic": "Quadratic Equations",
+        "lectures": [
+          {
+            "name": "QE 1",
+            "url": "https://www.youtube.com/watch?v=rk64bqehuto"
+          },
+          {
+            "name": "QE 2",
+            "url": "https://www.youtube.com/watch?v=X3c60CCB18U"
+          },
+          {
+            "name": "QE 3",
+            "url": "https://www.youtube.com/watch?v=27OVCl0b0nQ"
+          }
+        ]
+      },
+      {
+        "topic": "Cubic Equations",
+        "lectures": [
+          {
+            "name": "CE 1",
+            "url": "https://www.youtube.com/watch?v=NDe4t_eO_mE"
+          },
+          {
+            "name": "CE 2",
+            "url": "https://www.youtube.com/watch?v=nYJpeFaon9Y"
+          },
+          {
+            "name": "CE 3",
+            "url": "https://www.youtube.com/watch?v=vG-Z3bagJek"
+          }
+        ]
+      },
+      {
+        "topic": "Inequalities",
+        "lectures": [
+          {
+            "name": "IE 1",
+            "url": "https://www.youtube.com/watch?v=zIrr1lkvyBY"
+          },
+          {
+            "name": "IE 2",
+            "url": "https://www.youtube.com/watch?v=q6FeaM_18Pk"
+          },
+          {
+            "name": "IE 3",
+            "url": "https://www.youtube.com/watch?v=lY11kL2EREk"
+          },
+          {
+            "name": "IE 4",
+            "url": "https://www.youtube.com/watch?v=joZU568s8T4"
+          },
+          {
+            "name": "IE 5",
+            "url": "https://www.youtube.com/watch?v=TMOq7m_OKUw"
+          },
+          {
+            "name": "IE 6",
+            "url": "https://www.youtube.com/watch?v=EDLqKDO4ruY"
+          },
+          {
+            "name": "IE 7",
+            "url": "https://www.youtube.com/watch?v=gxO5nVZFO4I"
+          },
+          {
+            "name": "IE 8",
+            "url": "https://www.youtube.com/watch?v=0Q1Lz5z3HeM"
+          }
+        ]
+      },
+      {
+        "topic": "Advance Algebra",
+        "lectures": [
+          {
+            "name": "AA 1",
+            "url": "https://www.youtube.com/watch?v=PcORsQLuja8"
+          },
+          {
+            "name": "AA 2",
+            "url": "https://www.youtube.com/watch?v=u6gP3BHbU1c"
+          },
+          {
+            "name": "AA 3",
+            "url": "https://www.youtube.com/watch?v=TpTIG0saIrY"
+          },
+          {
+            "name": "AA 4",
+            "url": "https://www.youtube.com/watch?v=eW6vBToDaYE"
+          },
+          {
+            "name": "AA 5",
+            "url": "https://www.youtube.com/watch?v=0Hs-4Dc5SgQ"
+          },
+          {
+            "name": "AA 6",
+            "url": "https://www.youtube.com/watch?v=gNOb9Q61f-w"
+          },
+          {
+            "name": "AA 7",
+            "url": "https://www.youtube.com/watch?v=r6JYnOTv6hs"
+          }
+        ]
+      },
+      {
+        "topic": "Arithmetic Progression",
+        "lectures": [
+          {
+            "name": "AP 1",
+            "url": "https://www.youtube.com/watch?v=wSbjXsULtrI"
+          },
+          {
+            "name": "AP 2",
+            "url": "https://www.youtube.com/watch?v=V69nA_XihxI"
+          }
+        ]
+      },
+      {
+        "topic": "Graphs",
+        "lectures": [
+          {
+            "name": "G 1",
+            "url": "https://www.youtube.com/watch?v=BLXcly1Dvu4"
+          },
+          {
+            "name": "G 2",
+            "url": "https://www.youtube.com/watch?v=kOlcYqzYMQY"
+          }
+        ]
+      },
+      {
+        "topic": "Indices Surds",
+        "lectures": [
+          {
+            "name": "IS 1",
+            "url": "https://www.youtube.com/watch?v=zgxx5FpvCus"
+          },
+          {
+            "name": "IS 2",
+            "url": "https://www.youtube.com/watch?v=GdaRjTRJ_rg"
+          },
+          {
+            "name": "IS 3",
+            "url": "https://www.youtube.com/watch?v=AhpAzlI-WQA"
+          },
+          {
+            "name": "IS 4",
+            "url": "https://www.youtube.com/watch?v=zOGkoKJkgRw"
+          },
+          {
+            "name": "IS 5",
+            "url": "https://www.youtube.com/watch?v=bzrqhfqYOgY"
+          }
+        ]
+      },
+      {
+        "topic": "Sequence & Series",
+        "lectures": [
+          {
+            "name": "SS 1",
+            "url": "https://www.youtube.com/watch?v=XrbkOHqFQqA"
+          },
+          {
+            "name": "SS 2",
+            "url": "https://www.youtube.com/watch?v=FKFwQG0TvKA"
+          }
+        ]
+      },
+      {
+        "topic": "Logarithms",
+        "lectures": [
+          {
+            "name": "L 1",
+            "url": "https://www.youtube.com/watch?v=K6Jk3uEkIMA"
+          },
+          {
+            "name": "L 2",
+            "url": "https://youtu.be/SzseQAYENMc"
+          }
+        ]
+      },
+      {
+        "topic": "Functions",
+        "lectures": [
+          {
+            "name": "F 1",
+            "url": "https://www.youtube.com/watch?v=6FEnbG2Ux5o"
+          },
+          {
+            "name": "F 2",
+            "url": "https://www.youtube.com/watch?v=EWB1NaL4N4U"
+          },
+          {
+            "name": "F 3",
+            "url": "https://www.youtube.com/watch?v=6ca_RfR4A8Y"
+          },
+          {
+            "name": "F 4",
+            "url": "https://www.youtube.com/watch?v=LChCPuxO83s"
+          },
+          {
+            "name": "F 5",
+            "url": "https://www.youtube.com/watch?v=-tgziXRn-1k"
+          },
+          {
+            "name": "F 6",
+            "url": "https://www.youtube.com/watch?v=J1KIc8IEidw"
+          },
+          {
+            "name": "F 7",
+            "url": "https://www.youtube.com/watch?v=nHOh5GHiw30"
+          },
+          {
+            "name": "F 8",
+            "url": "https://www.youtube.com/watch?v=tK3U9u0jHJE"
+          },
+          {
+            "name": "F 9",
+            "url": "https://www.youtube.com/watch?v=cK1IejfD0I8"
+          },
+          {
+            "name": "F 10",
+            "url": "https://www.youtube.com/watch?v=rSbAIaV34Yg"
+          }
+        ]
+      },
+      {
+        "topic": "Statistics",
+        "lectures": [
+          {
+            "name": "S 1",
+            "url": "https://www.youtube.com/watch?v=VlYCQXSHutM"
+          },
+          {
+            "name": "S 2",
+            "url": "https://www.youtube.com/watch?v=zWI2Nv5_7iE"
+          },
+          {
+            "name": "S 3",
+            "url": "https://www.youtube.com/watch?v=FhsHkHjE0v4"
+          }
+        ]
+      },
+      {
+        "topic": "Probability",
+        "lectures": [
+          {
+            "name": "P1",
+            "url": "https://www.youtube.com/watch?v=b6hmLsjbA7E"
+          },
+          {
+            "name": "P2",
+            "url": "https://www.youtube.com/watch?v=1KYf9l1wGTY"
+          }
+        ]
+      },
+      {
+        "topic": "Permutation & Combination",
+        "lectures": [
+          {
+            "name": "PC 1",
+            "url": "https://www.youtube.com/watch?v=8kvqSY1-W5Y"
+          },
+          {
+            "name": "PC 2",
+            "url": "https://www.youtube.com/watch?v=hdp7hrc5Ams"
+          },
+          {
+            "name": "PC 3",
+            "url": "https://www.youtube.com/watch?v=fx30pQ4Qd_g"
+          },
+          {
+            "name": "PC 4",
+            "url": "https://www.youtube.com/watch?v=xl62EuAtYTc"
+          },
+          {
+            "name": "PC 5",
+            "url": "https://www.youtube.com/watch?v=ngV_itTBZr8"
+          },
+          {
+            "name": "PC 6",
+            "url": "https://www.youtube.com/watch?v=Nt7yqNocfg4"
+          },
+          {
+            "name": "PC 7",
+            "url": "https://www.youtube.com/watch?v=jnEtA2CxPpA"
+          },
+          {
+            "name": "PC 8",
+            "url": "https://www.youtube.com/watch?v=kHR2TecGao8"
+          },
+          {
+            "name": "PC 10",
+            "url": "https://www.youtube.com/watch?v=8xtquD6djG8"
+          },
+          {
+            "name": "PC 11",
+            "url": "https://www.youtube.com/watch?v=jzE_pUpgN6k"
+          },
+          {
+            "name": "PC 12",
+            "url": "https://www.youtube.com/watch?v=_lQk4wQ0wQM"
+          },
+          {
+            "name": "PC 13.1",
+            "url": "https://www.youtube.com/watch?v=3ijB7Q9A8XI"
+          },
+          {
+            "name": "PC 13.2",
+            "url": "https://www.youtube.com/watch?v=QjH6rkTCehk"
+          },
+          {
+            "name": "PC 14",
+            "url": "https://www.youtube.com/watch?v=R179XB7ePbc"
+          },
+          {
+            "name": "PC 15",
+            "url": "https://www.youtube.com/watch?v=DdWtVJe-f6Q"
+          },
+          {
+            "name": "PC 16",
+            "url": "https://www.youtube.com/watch?v=y9qX5tnMM8o"
+          },
+          {
+            "name": "PC 17",
+            "url": "https://www.youtube.com/watch?v=p5uqB2WUdfQ"
+          },
+          {
+            "name": "PC 18",
+            "url": "https://www.youtube.com/watch?v=hDyInCduxfU"
+          },
+          {
+            "name": "PC 19",
+            "url": "https://www.youtube.com/watch?v=IlcIDDwMTpQ"
+          },
+          {
+            "name": "PC 20",
+            "url": "https://www.youtube.com/watch?v=9iQKD66yQzY"
+          },
+          {
+            "name": "PC 21",
+            "url": "https://www.youtube.com/watch?v=D982GSUr-zI"
+          },
+          {
+            "name": "PC 22",
+            "url": "https://www.youtube.com/watch?v=jCok-U5nxT4"
+          }
+        ]
+      },
+      {
+        "topic": "Number System",
+        "lectures": [
+          {
+            "name": "Playlist",
+            "url": "https://www.youtube.com/playlist?list=PLG4bwc5fquzgmP5BLHrRDwBueer0udDjc"
+          }
+        ]
+      },
+      {
+        "topic": "Numbers",
+        "lectures": [
+          {
+            "name": "N 1",
+            "url": "https://www.youtube.com/watch?v=_g89_8Bb57g"
+          },
+          {
+            "name": "N 2",
+            "url": "https://www.youtube.com/watch?v=KiG0yg61alo"
+          },
+          {
+            "name": "N 3",
+            "url": "https://www.youtube.com/watch?v=JU-b_Zu-z7U"
+          }
+        ]
+      },
+      {
+        "topic": "Factorials",
+        "lectures": [
+          {
+            "name": "F 1",
+            "url": "https://www.youtube.com/watch?v=V85eME7WS0E"
+          },
+          {
+            "name": "F 2",
+            "url": "https://www.youtube.com/watch?v=5AbOcjrxJ34"
+          },
+          {
+            "name": "F 3",
+            "url": "https://www.youtube.com/watch?v=mmj4QW5p8Bc"
+          },
+          {
+            "name": "F 4",
+            "url": "https://www.youtube.com/watch?v=sbyU48ZOsVM"
+          },
+          {
+            "name": "F 5",
+            "url": "https://www.youtube.com/watch?v=Roj0wDIN0ck"
+          },
+          {
+            "name": "F 6",
+            "url": "https://www.youtube.com/watch?v=GrbyiWvFYwA"
+          }
+        ]
+      },
+      {
+        "topic": "Remainders",
+        "lectures": [
+          {
+            "name": "R 1",
+            "url": "https://www.youtube.com/watch?v=1PYOIpFFwC4"
+          },
+          {
+            "name": "R 2",
+            "url": "https://www.youtube.com/watch?v=kB3BaJcrnJA"
+          },
+          {
+            "name": "R 3",
+            "url": "https://www.youtube.com/watch?v=hzlafE36Zvc"
+          },
+          {
+            "name": "R 4.1",
+            "url": "https://www.youtube.com/watch?v=NEDVnjh26JE"
+          },
+          {
+            "name": "R 4.2",
+            "url": "https://www.youtube.com/watch?v=WY49oDwCoDo"
+          },
+          {
+            "name": "R 5",
+            "url": "https://www.youtube.com/watch?v=DsyZWi6R9cw"
+          },
+          {
+            "name": "R 6",
+            "url": "https://www.youtube.com/watch?v=z7_vHO9JL9Y"
+          },
+          {
+            "name": "R 7",
+            "url": "https://www.youtube.com/watch?v=nZasw0eAO1M"
+          },
+          {
+            "name": "R 8",
+            "url": "https://www.youtube.com/watch?v=zhfDQvS7EnU"
+          }
+        ]
+      },
+      {
+        "topic": "Divisibility Rules",
+        "lectures": [
+          {
+            "name": "DR 1",
+            "url": "https://www.youtube.com/watch?v=p0JbJd5DpWY"
+          },
+          {
+            "name": "DR 2",
+            "url": "https://www.youtube.com/watch?v=SSq9C2O6cco"
+          },
+          {
+            "name": "DR 3",
+            "url": "https://www.youtube.com/watch?v=NqgFXVIrRmY"
+          },
+          {
+            "name": "DR 4",
+            "url": "https://www.youtube.com/watch?v=rb3Sk_L7vMQ"
+          }
+        ]
+      },
+      {
+        "topic": "Difference of Perfect Square",
+        "lectures": [
+          {
+            "name": "DPS 1",
+            "url": "https://www.youtube.com/watch?v=JdPktfXuY0k"
+          },
+          {
+            "name": "DPS 2",
+            "url": "https://www.youtube.com/watch?v=sdQfevZ77vg"
+          },
+          {
+            "name": "DPS 3",
+            "url": "https://www.youtube.com/watch?v=fJKyC5IyTr4"
+          }
+        ]
+      },
+      {
+        "topic": "Factors",
+        "lectures": [
+          {
+            "name": "FS 1",
+            "url": "https://www.youtube.com/watch?v=co30DI-DAlU"
+          },
+          {
+            "name": "FS 2",
+            "url": "https://www.youtube.com/watch?v=2QzEjiXOtfc"
+          },
+          {
+            "name": "FS 3",
+            "url": "https://www.youtube.com/watch?v=_Rp6Pzfk8r0"
+          },
+          {
+            "name": "FS 4",
+            "url": "https://www.youtube.com/watch?v=Y4v_WqJGfE0"
+          },
+          {
+            "name": "FS 5",
+            "url": "https://www.youtube.com/watch?v=KWfgORk6XAk"
+          },
+          {
+            "name": "FS 6",
+            "url": "https://www.youtube.com/watch?v=Fb4OWYnCwrw"
+          },
+          {
+            "name": "FS 7",
+            "url": "https://www.youtube.com/watch?v=fYrmFUomDYU"
+          },
+          {
+            "name": "FS 8",
+            "url": "https://www.youtube.com/watch?v=okXfBsuXsbk"
+          },
+          {
+            "name": "FS 9",
+            "url": "https://www.youtube.com/watch?v=MZ2tVjANADY"
+          },
+          {
+            "name": "FS 10",
+            "url": "https://www.youtube.com/watch?v=p-Rcw7dikaM"
+          },
+          {
+            "name": "FS 11",
+            "url": "https://www.youtube.com/watch?v=BM4NMqu7qbc"
+          },
+          {
+            "name": "FS 12",
+            "url": "https://www.youtube.com/watch?v=ql8lPaV4b6g"
+          }
+        ]
+      },
+      {
+        "topic": "HCF LCM",
+        "lectures": [
+          {
+            "name": "HCF 1",
+            "url": "https://www.youtube.com/watch?v=JyN6EROdhrw"
+          },
+          {
+            "name": "HCF 2",
+            "url": "https://www.youtube.com/watch?v=0S_rT7720t8"
+          },
+          {
+            "name": "HCF 3",
+            "url": "https://www.youtube.com/watch?v=GUsdagnVKFA"
+          },
+          {
+            "name": "HCF 4",
+            "url": "https://www.youtube.com/watch?v=Ikxsz4En-RQ"
+          },
+          {
+            "name": "HCF 5",
+            "url": "https://www.youtube.com/watch?v=pHyuUy_spww"
+          }
+        ]
+      },
+      {
+        "topic": "Last 2 Digits Even/Odd",
+        "lectures": [
+          {
+            "name": "L2D 1",
+            "url": "https://www.youtube.com/watch?v=8s1Na4rE1nU"
+          },
+          {
+            "name": "L2D 2",
+            "url": "https://www.youtube.com/watch?v=lk_gmCe96ss"
+          }
+        ]
+      },
+      {
+        "topic": "Base Systems",
+        "lectures": [
+          {
+            "name": "BS 1",
+            "url": "https://www.youtube.com/watch?v=lR2znNLWryk"
+          },
+          {
+            "name": "BS 2",
+            "url": "https://www.youtube.com/watch?v=Dgk10V8cvOs"
+          },
+          {
+            "name": "BS 3",
+            "url": "https://www.youtube.com/watch?v=fF8ptwkxjVA"
+          },
+          {
+            "name": "BS 4",
+            "url": "https://www.youtube.com/watch?v=XIKlSIM9f3M"
+          }
+        ]
+      },
+      {
+        "topic": "Recurring Decimals",
+        "lectures": [
+          {
+            "name": "RD 1",
+            "url": "https://www.youtube.com/watch?v=NKY2Y3nS8cw"
+          }
+        ]
+      },
+      {
+        "topic": "Geometry",
+        "lectures": [
+          {
+            "name": "Playlist",
+            "url": "https://www.youtube.com/playlist?list=PLG4bwc5fquziUvO3dlzG0MW9vqi3epud4"
+          }
+        ]
+      },
+      {
+        "topic": "Introduction",
+        "lectures": [
+          {
+            "name": "IN 1",
+            "url": "https://www.youtube.com/watch?v=rUI1bbCvk7E"
+          }
+        ]
+      },
+      {
+        "topic": "Triangles",
+        "lectures": [
+          {
+            "name": "T 1",
+            "url": "https://www.youtube.com/watch?v=25P2O9r3AfM"
+          },
+          {
+            "name": "T 2",
+            "url": "https://www.youtube.com/watch?v=8T1yLs03Y74"
+          },
+          {
+            "name": "T3",
+            "url": "https://www.youtube.com/watch?v=uDGOgVvUrcc"
+          },
+          {
+            "name": "T 4",
+            "url": "https://www.youtube.com/watch?v=rfCcWNh3cjs"
+          },
+          {
+            "name": "T 5",
+            "url": "https://www.youtube.com/watch?v=8VwTpi1xHnc"
+          },
+          {
+            "name": "T 6",
+            "url": "https://www.youtube.com/watch?v=GAWnMfYzQKQ"
+          },
+          {
+            "name": "T 7",
+            "url": "https://www.youtube.com/watch?v=wVc1sXfYSyI"
+          },
+          {
+            "name": "T 8",
+            "url": "https://www.youtube.com/watch?v=Q5IDYE6e4mo"
+          },
+          {
+            "name": "T 9",
+            "url": "https://www.youtube.com/watch?v=hKyCT4T4Q4M"
+          },
+          {
+            "name": "T 10",
+            "url": "https://www.youtube.com/watch?v=c_Abx1YkGbE"
+          },
+          {
+            "name": "T 11",
+            "url": "https://www.youtube.com/watch?v=GJu0L7KeXAg"
+          },
+          {
+            "name": "T 12",
+            "url": "https://www.youtube.com/watch?v=hlwCd_1zVgY"
+          },
+          {
+            "name": "T 13",
+            "url": "https://www.youtube.com/watch?v=Y68H-ARhV90"
+          }
+        ]
+      },
+      {
+        "topic": "Quadrilaterals",
+        "lectures": [
+          {
+            "name": "Q 1",
+            "url": "https://www.youtube.com/watch?v=TZadcVDti64"
+          },
+          {
+            "name": "Q 2",
+            "url": "https://www.youtube.com/watch?v=0h9-VSm6Hfo"
+          },
+          {
+            "name": "Q 3",
+            "url": "https://www.youtube.com/watch?v=Dy4_ESXGjeY"
+          }
+        ]
+      },
+      {
+        "topic": "Circles",
+        "lectures": [
+          {
+            "name": "C 1",
+            "url": "https://www.youtube.com/watch?v=EAz4sd6svzo"
+          },
+          {
+            "name": "C 2",
+            "url": "https://www.youtube.com/watch?v=nZR9cijpmkQ"
+          },
+          {
+            "name": "C 3",
+            "url": "https://www.youtube.com/watch?v=BAlO-DvSWic"
+          }
+        ]
+      },
+      {
+        "topic": "Mensuration",
+        "lectures": [
+          {
+            "name": "M 1",
+            "url": "https://www.youtube.com/watch?v=HhtLt2JZKu4"
+          },
+          {
+            "name": "M 2",
+            "url": "https://www.youtube.com/watch?v=jQmPUysLjlg"
+          },
+          {
+            "name": "M 3",
+            "url": "https://www.youtube.com/watch?v=fxu0gBgnB78"
+          },
+          {
+            "name": "M 4",
+            "url": "https://www.youtube.com/watch?v=ADkdD9aEhas"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "DILR - Ravi Prakash",
+    "category": "DILR",
+    "topics": [
+      {
+        "topic": "Introduction",
+        "lectures": [
+          {
+            "name": "IN 1",
+            "url": "https://www.youtube.com/watch?v=KhNeTrBYbYo"
+          }
+        ]
+      },
+      {
+        "topic": "Linear & Circular Arrangement",
+        "lectures": [
+          {
+            "name": "LCA 1",
+            "url": "https://www.youtube.com/watch?v=4tI-h-GKWVk"
+          },
+          {
+            "name": "LCA 2",
+            "url": "https://www.youtube.com/watch?v=htsJtjvaoXE"
+          },
+          {
+            "name": "LCA 3",
+            "url": "https://www.youtube.com/watch?v=spET6FqiBZ8"
+          },
+          {
+            "name": "LCA 4",
+            "url": "https://www.youtube.com/watch?v=nP3Lgm4Q66k"
+          },
+          {
+            "name": "LCA 5",
+            "url": "https://www.youtube.com/watch?v=e513BAOTyU8"
+          }
+        ]
+      },
+      {
+        "topic": "Cubes",
+        "lectures": [
+          {
+            "name": "CU 1",
+            "url": "https://www.youtube.com/watch?v=0TdF_yyNkZk"
+          },
+          {
+            "name": "CU 2",
+            "url": "https://www.youtube.com/watch?v=SXGVyDsuHds"
+          },
+          {
+            "name": "CU 3",
+            "url": "https://www.youtube.com/watch?v=-a9xMpOq7ns"
+          },
+          {
+            "name": "CU 4",
+            "url": "https://www.youtube.com/watch?v=JNAyzPhHrRE"
+          }
+        ]
+      },
+      {
+        "topic": "Number Series",
+        "lectures": [
+          {
+            "name": "NS 1",
+            "url": "https://www.youtube.com/watch?v=vonVQlKY3hc"
+          },
+          {
+            "name": "NS 2",
+            "url": "https://www.youtube.com/watch?v=PyBRlquvVOs"
+          },
+          {
+            "name": "NS 3",
+            "url": "https://www.youtube.com/watch?v=S-3VsQ-m0qI"
+          },
+          {
+            "name": "NS 4",
+            "url": "https://www.youtube.com/watch?v=8euEBR3hY20"
+          },
+          {
+            "name": "NS 5",
+            "url": "https://www.youtube.com/watch?v=QO4pctfewO0"
+          },
+          {
+            "name": "NS 6",
+            "url": "https://www.youtube.com/watch?v=dB7jWl4ka_o"
+          }
+        ]
+      },
+      {
+        "topic": "Quant Based Puzzles",
+        "lectures": [
+          {
+            "name": "QBP 1",
+            "url": "https://www.youtube.com/watch?v=sQofq1SfL1M"
+          },
+          {
+            "name": "QBP 2",
+            "url": "https://www.youtube.com/watch?v=PnspTTuquqM"
+          },
+          {
+            "name": "QBP 3",
+            "url": "https://www.youtube.com/watch?v=9aOLBqs43qM"
+          },
+          {
+            "name": "QBP 4",
+            "url": "https://www.youtube.com/watch?v=uyF0vc9_fH4"
+          },
+          {
+            "name": "QBP 5",
+            "url": "https://www.youtube.com/watch?v=8m5mtFx9UFM"
+          },
+          {
+            "name": "QBP 6.1",
+            "url": "https://www.youtube.com/watch?v=QvyPr627ZKw"
+          },
+          {
+            "name": "QBP 6.2",
+            "url": "https://www.youtube.com/watch?v=U7RpC9NDW6Y"
+          },
+          {
+            "name": "QBP 7.1",
+            "url": "https://www.youtube.com/watch?v=X0eX7DG-4Xc"
+          },
+          {
+            "name": "QBP 7.2",
+            "url": "https://www.youtube.com/watch?v=wKs8tSaz1Mc"
+          },
+          {
+            "name": "QBP 7.3",
+            "url": "https://www.youtube.com/watch?v=VuWXMWtDiDU"
+          },
+          {
+            "name": "QBP 8",
+            "url": "https://www.youtube.com/watch?v=6Fbqmd_kcyQ"
+          },
+          {
+            "name": "QBP 9",
+            "url": "https://www.youtube.com/watch?v=BhtO9Ydj-Bs"
+          },
+          {
+            "name": "QBP 10",
+            "url": "https://www.youtube.com/watch?v=EthHS2K3p1U"
+          },
+          {
+            "name": "QBP 11",
+            "url": "https://www.youtube.com/watch?v=F4gALovZ2CQ"
+          },
+          {
+            "name": "QBP 12",
+            "url": "https://www.youtube.com/watch?v=anJ7pZ3NywE"
+          },
+          {
+            "name": "QBP 13",
+            "url": "https://www.youtube.com/watch?v=zGRh7H3GrDY"
+          },
+          {
+            "name": "QBP 14",
+            "url": "https://www.youtube.com/watch?v=AxjsYq1jI_U"
+          },
+          {
+            "name": "QBP 15",
+            "url": "https://www.youtube.com/watch?v=1xta40lS3co"
+          },
+          {
+            "name": "QBP 16",
+            "url": "https://www.youtube.com/watch?v=eKkk9jeMOqY"
+          },
+          {
+            "name": "QBP 17",
+            "url": "https://www.youtube.com/watch?v=r6lrQ10w1a8"
+          },
+          {
+            "name": "QBP 18",
+            "url": "https://www.youtube.com/watch?v=l0Af8Ta8Dy8"
+          }
+        ]
+      },
+      {
+        "topic": "Venn Diagrams",
+        "lectures": [
+          {
+            "name": "VD 1.1",
+            "url": "https://www.youtube.com/watch?v=D3iR5cIr_VQ"
+          },
+          {
+            "name": "VD 1.2",
+            "url": "https://www.youtube.com/watch?v=dRbw57eHvuo"
+          },
+          {
+            "name": "VD 2",
+            "url": "https://www.youtube.com/watch?v=Mj3OpZ5uzbE"
+          },
+          {
+            "name": "VD 3",
+            "url": "https://www.youtube.com/watch?v=ihqJj0HqcnU"
+          },
+          {
+            "name": "VD 4",
+            "url": "https://www.youtube.com/watch?v=Ys-FF3FpDC0"
+          },
+          {
+            "name": "VD 5",
+            "url": "https://www.youtube.com/watch?v=AxKzMdr8pno"
+          },
+          {
+            "name": "VD 6",
+            "url": "https://www.youtube.com/watch?v=417AgC9u_6U"
+          }
+        ]
+      },
+      {
+        "topic": "Chocolate Distribution",
+        "lectures": [
+          {
+            "name": "CD 1",
+            "url": "https://www.youtube.com/watch?v=hOUKSCHy5Zc"
+          },
+          {
+            "name": "CD 2",
+            "url": "https://www.youtube.com/watch?v=pzDYc4VmlGk"
+          }
+        ]
+      },
+      {
+        "topic": "Maximization Minimization",
+        "lectures": [
+          {
+            "name": "MM 1",
+            "url": "https://www.youtube.com/watch?v=940TyNpKTfU"
+          },
+          {
+            "name": "MM 2",
+            "url": "https://www.youtube.com/watch?v=ck6I_qzesGg"
+          },
+          {
+            "name": "MM 5",
+            "url": "https://www.youtube.com/watch?v=24O0yOYRB8M"
+          },
+          {
+            "name": "MM 6",
+            "url": "https://www.youtube.com/watch?v=kuYLqiKcJyM"
+          }
+        ]
+      },
+      {
+        "topic": "Games & Tournaments",
+        "lectures": [
+          {
+            "name": "GT 2",
+            "url": "https://www.youtube.com/watch?v=bC3Wlg6DIRg"
+          },
+          {
+            "name": "GT 3",
+            "url": "https://www.youtube.com/watch?v=-eGbg9Ks5hg"
+          },
+          {
+            "name": "GT 4",
+            "url": "https://www.youtube.com/watch?v=_DdVSBBF0uw"
+          },
+          {
+            "name": "GT 5",
+            "url": "https://www.youtube.com/watch?v=tkumi5op3WM"
+          },
+          {
+            "name": "GT 6",
+            "url": "https://www.youtube.com/watch?v=6dRzG9hqkzg"
+          },
+          {
+            "name": "GT 7",
+            "url": "https://www.youtube.com/watch?v=Tv5kTEQjCwI"
+          },
+          {
+            "name": "GT 8",
+            "url": "https://www.youtube.com/watch?v=CQ2c5nX2mwM"
+          }
+        ]
+      },
+      {
+        "topic": "Routes & Networks",
+        "lectures": [
+          {
+            "name": "RN 1",
+            "url": "https://www.youtube.com/watch?v=UcBNNLkeuz8"
+          },
+          {
+            "name": "RN 2",
+            "url": "https://www.youtube.com/watch?v=Bd8ciUPzKtk"
+          }
+        ]
+      },
+      {
+        "topic": "Calendars",
+        "lectures": [
+          {
+            "name": "C 1",
+            "url": "https://www.youtube.com/watch?v=fnGRCej5qUw"
+          },
+          {
+            "name": "C 2",
+            "url": "https://www.youtube.com/watch?v=NnOena8Al98"
+          },
+          {
+            "name": "C 3",
+            "url": "https://www.youtube.com/watch?v=UbLOaYv5doY"
+          }
+        ]
+      },
+      {
+        "topic": "Pie Charts",
+        "lectures": [
+          {
+            "name": "PC 1",
+            "url": "https://www.youtube.com/watch?v=Kn17_JoFmjU"
+          },
+          {
+            "name": "PC 2",
+            "url": "https://www.youtube.com/watch?v=A6K2pPl0BLA"
+          },
+          {
+            "name": "PC 3",
+            "url": "https://www.youtube.com/watch?v=8OhqPdBcGOc"
+          },
+          {
+            "name": "PC 4",
+            "url": "https://www.youtube.com/watch?v=FpGBpIyIIA4"
+          },
+          {
+            "name": "PC 5",
+            "url": "https://www.youtube.com/watch?v=Y2OTzU5fG8s"
+          }
+        ]
+      },
+      {
+        "topic": "Tables",
+        "lectures": [
+          {
+            "name": "T 1",
+            "url": "https://www.youtube.com/watch?v=gqYVcVjqW0k"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "DILR - Elites Grid",
+    "category": "DILR",
+    "topics": [
+      {
+        "topic": "Seating Arrangements",
+        "lectures": [
+          {
+            "name": "SA 1",
+            "url": "https://www.youtube.com/watch?v=nRuRNnyi19o"
+          },
+          {
+            "name": "SA 2",
+            "url": "https://www.youtube.com/watch?v=Xy32CqkoWwg"
+          },
+          {
+            "name": "SA 3",
+            "url": "https://www.youtube.com/watch?v=Fwp6SOsYqZA"
+          },
+          {
+            "name": "SA 4",
+            "url": "https://www.youtube.com/watch?v=-84_EAjopG8"
+          },
+          {
+            "name": "SA 5",
+            "url": "https://www.youtube.com/watch?v=4GVbV3HABIQ"
+          },
+          {
+            "name": "SA 6",
+            "url": "https://www.youtube.com/watch?v=i69uNbe4J6o"
+          },
+          {
+            "name": "SA 7",
+            "url": "https://www.youtube.com/watch?v=AeLinc16pFI"
+          }
+        ]
+      },
+      {
+        "topic": "Games & Tournaments",
+        "lectures": [
+          {
+            "name": "GT 1",
+            "url": "https://www.youtube.com/watch?v=tuYL-njb-6M"
+          }
+        ]
+      },
+      {
+        "topic": "Set Theory",
+        "lectures": [
+          {
+            "name": "ST 1",
+            "url": "https://www.youtube.com/watch?v=_WLuV4m8GWY"
+          },
+          {
+            "name": "ST 2",
+            "url": "https://www.youtube.com/watch?v=0UlQYwCLEW8"
+          },
+          {
+            "name": "ST 3",
+            "url": "https://www.youtube.com/watch?v=2kQ1_AxaPeA"
+          }
+        ]
+      },
+      {
+        "topic": "Selection & Distribution",
+        "lectures": [
+          {
+            "name": "SD 1",
+            "url": "https://www.youtube.com/watch?v=DcX3oOYVDh0"
+          }
+        ]
+      },
+      {
+        "topic": "Allegations Approach",
+        "lectures": [
+          {
+            "name": "A 1",
+            "url": "https://www.youtube.com/watch?v=t8jLWUCCxMI"
+          }
+        ]
+      },
+      {
+        "topic": "Arrival Departure Set",
+        "lectures": [
+          {
+            "name": "AD 1",
+            "url": "https://www.youtube.com/watch?v=BwiTZjmDeWU"
+          }
+        ]
+      },
+      {
+        "topic": "Blood Relations",
+        "lectures": [
+          {
+            "name": "BR 1",
+            "url": "https://www.youtube.com/watch?v=CslfUEonV3U"
+          },
+          {
+            "name": "BR 2",
+            "url": "https://www.youtube.com/watch?v=FMIORWR7j60"
+          },
+          {
+            "name": "BR 3",
+            "url": "https://www.youtube.com/watch?v=Bv8_ItNAB3w"
+          },
+          {
+            "name": "BR 4",
+            "url": "https://www.youtube.com/watch?v=HflORNeyC70&t=6s"
+          }
+        ]
+      },
+      {
+        "topic": "Directions",
+        "lectures": [
+          {
+            "name": "D 1",
+            "url": "https://www.youtube.com/watch?v=WYgZ1Lnbt7A"
+          }
+        ]
+      },
+      {
+        "topic": "Coding & Decoding",
+        "lectures": [
+          {
+            "name": "CD 1",
+            "url": "https://www.youtube.com/watch?v=g7PbJXGOBCs"
+          }
+        ]
+      },
+      {
+        "topic": "Progressive Marking",
+        "lectures": [
+          {
+            "name": "PM 1",
+            "url": "https://www.youtube.com/watch?v=jvRRH23mXZs"
+          }
+        ]
+      },
+      {
+        "topic": "Order Based Puzzles",
+        "lectures": [
+          {
+            "name": "OB 1",
+            "url": "https://www.youtube.com/watch?v=syl6frSao4w"
+          }
+        ]
+      },
+      {
+        "topic": "Data Interpretation Tricks",
+        "lectures": [
+          {
+            "name": "DIT 1",
+            "url": "https://www.youtube.com/watch?v=uxFsmHkJ7a8"
+          }
+        ]
+      },
+      {
+        "topic": "Practice Questions",
+        "lectures": [
+          {
+            "name": "PQ 1",
+            "url": "https://www.youtube.com/watch?v=THfhVSu7Xrs"
+          },
+          {
+            "name": "PQ 2",
+            "url": "https://www.youtube.com/watch?v=6bi3lgO8oYY"
+          },
+          {
+            "name": "PQ 3",
+            "url": "https://www.youtube.com/watch?v=V3nZnhnosH4"
+          },
+          {
+            "name": "PQ 4",
+            "url": "https://www.youtube.com/watch?v=FVF3ylBUII4"
+          },
+          {
+            "name": "PQ 5",
+            "url": "https://www.youtube.com/watch?v=QLsqfzgTjsA"
+          },
+          {
+            "name": "PQ 6",
+            "url": "https://www.youtube.com/watch?v=1G6gRB7ThGI"
+          },
+          {
+            "name": "PQ 7",
+            "url": "https://www.youtube.com/watch?v=X70kD790kJ8"
+          },
+          {
+            "name": "PQ 8",
+            "url": "https://www.youtube.com/watch?v=cVupLaeJXdo"
+          },
+          {
+            "name": "PQ 9",
+            "url": "https://www.youtube.com/watch?v=tpedAE5C_SQ"
+          },
+          {
+            "name": "PQ 10",
+            "url": "https://www.youtube.com/watch?v=DZrQPy-lpQI"
+          },
+          {
+            "name": "PQ 11",
+            "url": "https://www.youtube.com/watch?v=SeJgHVCIJwU"
+          },
+          {
+            "name": "PQ 12",
+            "url": "https://www.youtube.com/watch?v=-x9pVFIuY0k"
+          },
+          {
+            "name": "PQ 13",
+            "url": "https://www.youtube.com/watch?v=Jj7T11q8YKk"
+          },
+          {
+            "name": "PQ 14",
+            "url": "https://www.youtube.com/watch?v=xWV5MsVehvE"
+          },
+          {
+            "name": "PQ 15",
+            "url": "https://www.youtube.com/watch?v=xtt94JwucUw"
+          },
+          {
+            "name": "PQ 16",
+            "url": "https://www.youtube.com/watch?v=vRW7VmI3lD4"
+          },
+          {
+            "name": "PQ 17",
+            "url": "https://www.youtube.com/watch?v=EuMKdHDoPWE"
+          },
+          {
+            "name": "PQ 18",
+            "url": "https://www.youtube.com/watch?v=fO32XylBCZQ"
+          },
+          {
+            "name": "PQ 19",
+            "url": "https://www.youtube.com/watch?v=NwwGzG7s6VI"
+          },
+          {
+            "name": "PQ 20",
+            "url": "https://www.youtube.com/watch?v=x6CefOe1eVU"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "VARC - Harpreet Kaur",
+    "category": "VARC",
+    "topics": [
+      {
+        "topic": "Introduction",
+        "lectures": [
+          {
+            "name": "IN 1",
+            "url": "https://www.youtube.com/watch?v=e1Ec-VhqkaU"
+          }
+        ]
+      },
+      {
+        "topic": "Verbal Reasoning",
+        "lectures": [
+          {
+            "name": "VR 1",
+            "url": "https://www.youtube.com/watch?v=nHwi23ZAJIw"
+          }
+        ]
+      },
+      {
+        "topic": "Vocabulary",
+        "lectures": [
+          {
+            "name": "V 1",
+            "url": "https://www.youtube.com/watch?v=b6JWVRFhIDA"
+          },
+          {
+            "name": "V 2",
+            "url": "https://www.youtube.com/watch?v=i8Vpz-Csn5A"
+          },
+          {
+            "name": "V 3",
+            "url": "https://www.youtube.com/watch?v=uVY9OGOYhCM"
+          },
+          {
+            "name": "V 4",
+            "url": "https://www.youtube.com/watch?v=XfgNFGWiSxg"
+          },
+          {
+            "name": "V 5",
+            "url": "https://www.youtube.com/watch?v=AwWDksT2aeA"
+          },
+          {
+            "name": "V 6",
+            "url": "https://www.youtube.com/watch?v=tWYBz3btCD4"
+          },
+          {
+            "name": "V 7",
+            "url": "https://www.youtube.com/watch?v=B9v5EYPUx5Q"
+          },
+          {
+            "name": "V 8",
+            "url": "https://www.youtube.com/watch?v=k16iL8r8LAY"
+          }
+        ]
+      },
+      {
+        "topic": "Para Jumbles",
+        "lectures": [
+          {
+            "name": "PJ 1",
+            "url": "https://www.youtube.com/watch?v=mvOtomTXXAM"
+          },
+          {
+            "name": "PJ 2",
+            "url": "https://www.youtube.com/watch?v=_EVvVO3-5G4"
+          }
+        ]
+      },
+      {
+        "topic": "Para Completition",
+        "lectures": [
+          {
+            "name": "PC 1",
+            "url": "https://www.youtube.com/watch?v=k6MniuvwcCg"
+          },
+          {
+            "name": "PC 2",
+            "url": "https://www.youtube.com/watch?v=giSUat4Unac"
+          }
+        ]
+      },
+      {
+        "topic": "Para Summary",
+        "lectures": [
+          {
+            "name": "PS 1",
+            "url": "https://www.youtube.com/watch?v=1W1erWwb36w"
+          }
+        ]
+      },
+      {
+        "topic": "Odd One Out",
+        "lectures": [
+          {
+            "name": "OOO 1",
+            "url": "https://www.youtube.com/watch?v=2DSK-Q2Rd1w"
+          }
+        ]
+      },
+      {
+        "topic": "Critical Reasoning",
+        "lectures": [
+          {
+            "name": "CR 1",
+            "url": "https://www.youtube.com/watch?v=UkP9rA2ie7o"
+          },
+          {
+            "name": "CR 2",
+            "url": "https://www.youtube.com/watch?v=rUqZfE-KlBM"
+          },
+          {
+            "name": "CR 3",
+            "url": "https://www.youtube.com/watch?v=H3XxJW8L-jE"
+          },
+          {
+            "name": "CR 4",
+            "url": "https://www.youtube.com/watch?v=BvJdE9chElE"
+          },
+          {
+            "name": "CR 5",
+            "url": "https://www.youtube.com/watch?v=0aTBFzTuSQo"
+          },
+          {
+            "name": "CR 6",
+            "url": "https://www.youtube.com/watch?v=TwINv5jNciM"
+          }
+        ]
+      },
+      {
+        "topic": "Reading Comprehension",
+        "lectures": [
+          {
+            "name": "RC 1",
+            "url": "https://www.youtube.com/watch?v=6IezpEOMEpQ"
+          },
+          {
+            "name": "RC 2",
+            "url": "https://www.youtube.com/watch?v=TOveIaXMaLY"
+          },
+          {
+            "name": "RC 3",
+            "url": "https://www.youtube.com/watch?v=MDlk_uVAqak"
+          },
+          {
+            "name": "RC 4",
+            "url": "https://www.youtube.com/watch?v=HNy_V66FrPQ"
+          },
+          {
+            "name": "RC 5",
+            "url": "https://www.youtube.com/watch?v=txAXk3TCNGw"
+          },
+          {
+            "name": "RC 6",
+            "url": "https://www.youtube.com/watch?v=BfPIaC9YQnc"
+          },
+          {
+            "name": "RC 7",
+            "url": "https://www.youtube.com/watch?v=1RnqNFcuLh8"
+          },
+          {
+            "name": "RC 8",
+            "url": "https://www.youtube.com/watch?v=YcfDaMzFVMY"
+          },
+          {
+            "name": "RC 9",
+            "url": "https://www.youtube.com/watch?v=SfLtQA-h4A8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "VARC - Gejo Speaks",
+    "category": "VARC",
+    "topics": [
+      {
+        "topic": "Reading Comprehension",
+        "lectures": [
+          {
+            "name": "RC 1",
+            "url": "https://youtu.be/ozhEHygD3YY"
+          },
+          {
+            "name": "RC 2",
+            "url": "https://youtu.be/6-dN3Qh2rsw"
+          },
+          {
+            "name": "RC 3",
+            "url": "https://youtu.be/IzzDC2qCYu0"
+          },
+          {
+            "name": "RC 4",
+            "url": "https://youtu.be/inaZ4ezqMu0"
+          },
+          {
+            "name": "RC 5",
+            "url": "https://youtu.be/PyqrqlWUQRg"
+          },
+          {
+            "name": "RC 6",
+            "url": "https://youtu.be/JVkPx46yK0I"
+          },
+          {
+            "name": "RC 7",
+            "url": "https://youtu.be/_rjuDn3G3p0"
+          },
+          {
+            "name": "RC 8",
+            "url": "https://youtu.be/2HO5GZ5JEn8"
+          }
+        ]
+      },
+      {
+        "topic": "Para Summary",
+        "lectures": [
+          {
+            "name": "PS 1",
+            "url": "https://youtu.be/1nUeQaoLuXc"
+          }
+        ]
+      },
+      {
+        "topic": "Para Jumbles",
+        "lectures": [
+          {
+            "name": "PJ 1",
+            "url": "https://youtu.be/PgNBT_Zp_Us"
+          }
+        ]
+      },
+      {
+        "topic": "Odd One Out",
+        "lectures": [
+          {
+            "name": "OOO 1",
+            "url": "https://youtu.be/In0aLW6hKiU"
+          }
+        ]
+      },
+      {
+        "topic": "Overall Verbal",
+        "lectures": [
+          {
+            "name": "OV 1",
+            "url": "https://youtu.be/6TtpnFT2DyE"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "VARC - Supergrads",
+    "category": "VARC",
+    "topics": [
+      {
+        "topic": "Word Power Made Easy",
+        "lectures": [
+          {
+            "name": "Playlist",
+            "url": "https://www.youtube.com/playlist?list=PLpUPbltJNtx4Oz6EQkN2O6LyjIkRs4L_8"
+          }
+        ]
+      },
+      {
+        "topic": "Passages",
+        "lectures": [
+          {
+            "name": "Playlist",
+            "url": "https://www.youtube.com/playlist?list=PLpUPbltJNtx6mWdjJsgIqv5PlfvMqUPcd"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "section": "VARC - After Completing Syllabus Overview",
+    "category": "VARC",
+    "topics": [
+      {
+        "topic": "VARC Game Changer",
+        "lectures": [
+          {
+            "name": "VCG 1",
+            "url": "https://www.youtube.com/watch?v=iEg1QkyqVPE"
+          },
+          {
+            "name": "VCG 2",
+            "url": "https://www.youtube.com/watch?v=y4qzUQMNhZQ&t=224s"
+          },
+          {
+            "name": "VCG 3",
+            "url": "https://www.youtube.com/watch?v=DhWiPEFgES0"
+          }
+        ]
+      },
+      {
+        "topic": "VARC 1000",
+        "lectures": [
+          {
+            "name": "V 1",
+            "url": "https://youtu.be/id6Ag4sqT8o"
+          },
+          {
+            "name": "V 2",
+            "url": "https://youtu.be/zx96ZpJGTwA"
+          },
+          {
+            "name": "V 3",
+            "url": "https://youtu.be/7bgCns__9f8"
+          },
+          {
+            "name": "V 4",
+            "url": "https://youtu.be/4Yt35pwEtFs"
+          },
+          {
+            "name": "V 5",
+            "url": "https://youtu.be/_nxrNmkCh6w"
+          },
+          {
+            "name": "V 6",
+            "url": "https://youtu.be/b3ONm9_NZZg"
+          },
+          {
+            "name": "V 7",
+            "url": "https://youtu.be/rDsQnSGwjsE"
+          },
+          {
+            "name": "V 8",
+            "url": "https://youtu.be/t6CQto4fllE"
+          },
+          {
+            "name": "V 9",
+            "url": "https://youtu.be/MtW-kICAYOg"
+          },
+          {
+            "name": "V 10",
+            "url": "https://youtu.be/QLiF55x-GFI"
+          }
+        ]
+      }
+    ]
+  }
+]
