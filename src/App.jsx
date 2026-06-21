@@ -1,6 +1,79 @@
 import React, { useState, useEffect, useRef } from 'react';
 import studyMaterial from './data/study_material.json';
 
+const pdfLibrary = [
+  {
+    title: "Quant Formula Book",
+    filename: "Quant-Formula-Book-by-Quantifiers-CAT-Academy.pdf",
+    category: "Math & Quant",
+    icon: "📙",
+    desc: "Complete booklet containing essential math formulas, rules, equations, and quick-solving methods."
+  },
+  {
+    title: "Geometry Shortcuts",
+    filename: "All-Geometery-Shortcuts-by-Quantifiers-CAT-Academy.pdf",
+    category: "Math & Quant",
+    icon: "📐",
+    desc: "Cheat-sheet handbook outlining angles, triangles, polygons, circles, and geometry shortcuts."
+  },
+  {
+    title: "Economic Curves Notes",
+    filename: "economic-curves-by-quantifiers-cat-academy.pdf",
+    category: "Math & Quant",
+    icon: "📈",
+    desc: "Visual notes mapping macro and micro economic curves, models, and graphs for reasoning tests."
+  },
+  {
+    title: "The Ultimate DILR Book",
+    filename: "The-Ultimate-DILR-Book-Updated.pdf",
+    category: "Data & Logic",
+    icon: "📊",
+    desc: "Comprehensive workbook featuring 400+ advanced Logical Reasoning and Data Interpretation puzzles."
+  },
+  {
+    title: "CAT Free Mocks Book",
+    filename: "CAT-Free-Mocks.pdf",
+    category: "Practice Papers",
+    icon: "📝",
+    desc: "A compilation of past mock question papers and detailed keys for self-timed evaluation."
+  },
+  {
+    title: "CAT 2025 Study Plan",
+    filename: "CAT-2025-study-plan.pdf",
+    category: "Strategy & Timing",
+    icon: "📅",
+    desc: "Detailed syllabus checklist, weightage distributions, and topic priorities."
+  },
+  {
+    title: "CAT 5-Month Strategy",
+    filename: "CAT-Strategy-for-5-months-Download.pdf",
+    category: "Strategy & Timing",
+    icon: "🎯",
+    desc: "Preparation tactics and milestones designed for the final 5 months prior to the exam."
+  },
+  {
+    title: "Weekly Timetable Plan",
+    filename: "Weekly-Timetable-By-Quantifiers.pdf",
+    category: "Strategy & Timing",
+    icon: "⏰",
+    desc: "Hour-by-hour prep allocation guidelines for balancing quant worksheets with reading."
+  },
+  {
+    title: "GDPI Preparation Handbook",
+    filename: "GDPI-Handbook.pdf",
+    category: "Admissions & Interview",
+    icon: "💼",
+    desc: "Complete guide for Group Discussions, Writing Ability Tests (WAT), and Personal Interviews at IIMA."
+  },
+  {
+    title: "GD & WAT Topics",
+    filename: "GD-Topics-WAT-by-Quantifiers.pdf",
+    category: "Admissions & Interview",
+    icon: "🗣️",
+    desc: "A curated list of current affairs, business case studies, and abstract prompts for interview practice."
+  }
+];
+
 export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
   
@@ -38,6 +111,7 @@ export default function App() {
   // Search & Pagination States
   const [testSearch, setTestSearch] = useState('');
   const [mockSearch, setMockSearch] = useState('');
+  const [pdfSearch, setPdfSearch] = useState('');
   const [verbalLimit, setVerbalLimit] = useState(16);
   const [dilrLimit, setDilrLimit] = useState(16);
   const [quantLimit, setQuantLimit] = useState(16);
@@ -124,7 +198,6 @@ export default function App() {
 
   // Helper to calculate preparation progress
   const completedTasksCount = Object.values(checkedTasks).filter(Boolean).length;
-  // Let's count completion based on 50 days (user completing 50 days worth of tasks)
   const progressPercent = Math.min(Math.round((completedTasksCount / 100) * 100), 100);
 
   // Formatting Helper for chatbot markdown responses
@@ -164,6 +237,13 @@ export default function App() {
     (m.va && m.va.toLowerCase().includes(mockSearch.toLowerCase())) ||
     (m.qa && m.qa.toLowerCase().includes(mockSearch.toLowerCase())) ||
     (m.lrdi && m.lrdi.text.toLowerCase().includes(mockSearch.toLowerCase()))
+  );
+
+  // Filter handlers for PDF library
+  const filteredPDFs = pdfLibrary.filter(pdf =>
+    pdf.title.toLowerCase().includes(pdfSearch.toLowerCase()) ||
+    pdf.category.toLowerCase().includes(pdfSearch.toLowerCase()) ||
+    pdf.desc.toLowerCase().includes(pdfSearch.toLowerCase())
   );
 
   // Get active day object
@@ -274,7 +354,7 @@ export default function App() {
                         </div>
                       </a>
                     ))}
-                    {/* PDF local references */}
+                    {/* PDF local references quick links */}
                     <a 
                       href="file:///d:/IIM A/Study Material/GDPI-Handbook.pdf" 
                       className="checklist-item" 
@@ -297,6 +377,11 @@ export default function App() {
                         <span className="text-muted" style={{ fontSize: '0.75rem' }}>Formula Sheets ➔</span>
                       </div>
                     </a>
+                  </div>
+                  <div style={{ marginTop: '1rem', textAlign: 'right' }}>
+                    <button className="nav-link" onClick={() => { setActiveTab('practice'); setSelectedPracticeTab('library'); }} style={{ display: 'inline-flex', padding: '0.25rem 0.75rem', width: 'auto', fontSize: '0.85rem' }}>
+                      View Full PDF Library ➔
+                    </button>
                   </div>
                 </section>
 
@@ -488,6 +573,12 @@ export default function App() {
                 onClick={() => setSelectedPracticeTab('mocks')}
               >
                 🏆 Mini Mocks & Sectionals
+              </button>
+              <button 
+                className={`sub-nav-btn ${selectedPracticeTab === 'library' ? 'active' : ''}`}
+                onClick={() => setSelectedPracticeTab('library')}
+              >
+                📂 Reference Library (PDFs)
               </button>
             </div>
 
@@ -800,7 +891,7 @@ export default function App() {
             {/* TAB 3: Mini Mocks */}
             {selectedPracticeTab === 'mocks' && (
               <div>
-                <div style={{ display: 'flex', justifyBetween: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
                   <p className="text-secondary" style={{ margin: 0 }}>Full sectional and mock sets with granular breakdowns.</p>
                   <input 
                     type="text" 
@@ -859,6 +950,57 @@ export default function App() {
                 {filteredMocks.length === 0 && (
                   <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--text-muted)' }}>
                     No mini mocks found matching "{mockSearch}".
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* TAB 4: Reference Library (PDFs) */}
+            {selectedPracticeTab === 'library' && (
+              <div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
+                  <p className="text-secondary" style={{ margin: 0 }}>Access locally stored reference handbooks, shortcut sheets, and formulas.</p>
+                  <input 
+                    type="text" 
+                    placeholder="Search PDFs by title or category..."
+                    value={pdfSearch}
+                    onChange={(e) => setPdfSearch(e.target.value)}
+                    className="search-input"
+                    style={{ margin: 0, padding: '0.6rem 1rem', fontSize: '0.9rem', maxWidth: '300px' }}
+                  />
+                </div>
+
+                <div className="test-grid">
+                  {filteredPDFs.map((pdf, idx) => (
+                    <div key={idx} className="test-card-detailed">
+                      <div className="flex justify-between align-center" style={{ borderBottom: '1px solid var(--border-light)', paddingBottom: '0.5rem' }}>
+                        <div className="flex align-center gap-1">
+                          <span style={{ fontSize: '1.5rem' }}>{pdf.icon}</span>
+                          <div>
+                            <h3 style={{ margin: 0, color: 'var(--text-primary)', fontSize: '1.05rem' }}>{pdf.title}</h3>
+                            <span style={{ fontSize: '0.75rem', color: 'var(--accent-secondary)', fontWeight: 'bold' }}>{pdf.category}</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <p className="text-secondary" style={{ fontSize: '0.85rem', lineHeight: 1.4 }}>
+                        {pdf.desc}
+                      </p>
+
+                      <a 
+                        href={`file:///d:/IIM A/Study Material/${pdf.filename}`}
+                        className="btn btn-secondary" 
+                        style={{ textDecoration: 'none', display: 'flex', justifyContent: 'center', padding: '0.5rem', fontSize: '0.9rem' }}
+                      >
+                        📂 Open Local PDF
+                      </a>
+                    </div>
+                  ))}
+                </div>
+
+                {filteredPDFs.length === 0 && (
+                  <div style={{ textAlign: 'center', padding: '3rem', color: 'var(--text-muted)' }}>
+                    No reference PDFs found matching "{pdfSearch}".
                   </div>
                 )}
               </div>
