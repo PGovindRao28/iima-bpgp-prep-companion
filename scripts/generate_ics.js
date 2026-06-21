@@ -88,52 +88,52 @@ const recurrenceRule = 'FREQ=WEEKLY;UNTIL=20261129T235959Z';
 
 events.push(
   {
-    title: 'Study: Quant Concept & Exercises',
+    title: 'Study: Verbal Concept & Practice',
     start: [2026, 6, 22, 19, 0],
     duration: { hours: 2, minutes: 30 },
-    description: 'Quant Concept + 10 problems.',
+    description: 'Verbal: Concept Study + RC Passages + Critical Reasoning (IITian verbal first priority).',
     recurrenceRule
   },
   {
-    title: 'Study: Verbal RC & Critical Reasoning',
+    title: 'Study: DILR & Data Insights',
     start: [2026, 6, 23, 19, 0],
     duration: { hours: 2, minutes: 30 },
-    description: 'RC passage + reading + CR set.',
+    description: 'DILR / GMAT Data Insights (2 timed sets + analysis).',
     recurrenceRule
   },
   {
-    title: 'Study: DILR / GMAT Data Insights',
+    title: 'Study: Verbal logic & CR',
     start: [2026, 6, 17, 19, 0],
     duration: { hours: 2, minutes: 30 },
-    description: 'Data Insights / DILR (2 sets).',
+    description: 'Verbal: GMAT Critical Reasoning & CAT Paragraph logic.',
     recurrenceRule
   },
   {
-    title: 'Study: Quant Concept & Exercises',
+    title: 'Study: Quant Selective & Hard Topics',
     start: [2026, 6, 18, 19, 0],
     duration: { hours: 2, minutes: 30 },
-    description: 'Quant Concept + 10 problems.',
+    description: 'Quant: Selective concept study + 10 hard problems (weak areas only).',
     recurrenceRule
   },
   {
-    title: 'Study: Verbal: CAT VA & GMAT CR',
+    title: 'Study: Verbal Timed Sets & Drills',
     start: [2026, 6, 19, 19, 0],
     duration: { hours: 2, minutes: 30 },
-    description: 'Verbal: CAT VA + GMAT CR.',
+    description: 'Verbal: Timed sets (RC passages + CR) speed drills.',
     recurrenceRule
   },
   {
-    title: 'Study: Data/Logic Sets & Quant Test',
+    title: 'Study: DILR Sets & Verbal Test',
     start: [2026, 6, 20, 14, 0],
     duration: { hours: 4, minutes: 30 },
-    description: 'Data/Logic sets + quant topic test + weak areas.',
+    description: 'DILR timed sets + Verbal topic test + detailed error log analysis.',
     recurrenceRule
   },
   {
-    title: 'Study: Verbal Test, Mock & Error Log',
+    title: 'Study: Mock Exam & Strategy Review',
     start: [2026, 6, 21, 10, 0],
     duration: { hours: 4, minutes: 30 },
-    description: 'Verbal topic test + weekly mock + error-log update.',
+    description: 'Weekly Mock test (GMAT/CAT) + QA section review.',
     recurrenceRule
   }
 );

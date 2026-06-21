@@ -76,6 +76,9 @@ I can't browse the web in this chat, and BPGP is a newer/evolving program — so
 
 ## 5. Phase 1 — Foundations (Jun 22 – Aug 16)
 
+> [!TIP]
+> **IITian Profile Tweak:** Since you already have a strong mathematical foundation, do not spend excessive time studying basic math concepts. Allocate 75% of your weekly study hours to Verbal Reasoning (RC, CR, and Verbal Logic) and DILR, using only a brief session on Thursdays for selective high-level Quant practice (CAT algebra/geometry and GMAT word problems).
+
 Cover every concept once. No full mocks. Build the shared base that serves all three exams.
 
 **Quant (serves CAT QA / GMAT Quant / IAT):**
@@ -148,17 +151,17 @@ After CAT, the focus shifts to the formal application, the IIMA Admission Test (
 
 ---
 
-## 9. Weekly template (working professional, ~22 hrs)
+## 9. Weekly template (working professional, ~22 hrs) - *Verbal & Logic Priority (IITian Restructured)*
 
-| Day | ~2.5 hrs |
-|---|---|
-| Mon | Quant concept + 10 problems |
-| Tue | RC passage + reading + CR set |
-| Wed | Data Insights / DILR (2 sets) |
-| Thu | Quant concept + 10 problems |
-| Fri | Verbal: CAT VA + GMAT CR |
-| Sat (4–5 hrs) | Data/Logic sets + quant topic test + weak areas |
-| Sun (4–5 hrs) | Verbal topic test + weekly mock + error-log update |
+| Day | ~2.5 hrs | Focus Area |
+|---|---|---|
+| **Mon** | Verbal: Concept Study + RC Passages + Critical Reasoning | Verbal foundations first |
+| **Tue** | DILR / GMAT Data Insights (2 timed sets + analysis) | Logical aptitude focus |
+| **Wed** | Verbal: GMAT Critical Reasoning & CAT Paragraph logic | Critical verbal reasoning |
+| **Thu** | Quant: Selective concept study + 10 hard problems (weak areas only) | Minimal math concept study |
+| **Fri** | Verbal: Timed sets (RC passages + CR) | Speed & precision drills |
+| **Sat (4–5 hrs)** | DILR timed sets + Verbal topic test + detailed error log analysis | Combined logic + verbal tests |
+| **Sun (4–5 hrs)** | Weekly Mock test (GMAT/CAT) + QA section review / geometry revision | Mock testing & strategy revision |
 
 ---
 

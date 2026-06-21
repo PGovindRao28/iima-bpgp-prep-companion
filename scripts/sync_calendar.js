@@ -275,44 +275,44 @@ function getCalendarEventsList() {
 
   const weeklySchedule = [
     {
-      summary: 'Study: Quant Concept & Exercises',
-      description: 'Quant Concept + 10 problems.',
+      summary: 'Study: Verbal Concept & Practice',
+      description: 'Verbal: Concept Study + RC Passages + Critical Reasoning (IITian verbal first priority).',
       start: '2026-06-22T19:00:00',
       end: '2026-06-22T21:30:00'
     },
     {
-      summary: 'Study: Verbal RC & Critical Reasoning',
-      description: 'RC passage + reading + CR set.',
+      summary: 'Study: DILR & Data Insights',
+      description: 'DILR / GMAT Data Insights (2 timed sets + analysis).',
       start: '2026-06-23T19:00:00',
       end: '2026-06-23T21:30:00'
     },
     {
-      summary: 'Study: DILR / GMAT Data Insights',
-      description: 'Data Insights / DILR (2 sets).',
+      summary: 'Study: Verbal logic & CR',
+      description: 'Verbal: GMAT Critical Reasoning & CAT Paragraph logic.',
       start: '2026-06-17T19:00:00',
       end: '2026-06-17T21:30:00'
     },
     {
-      summary: 'Study: Quant Concept & Exercises',
-      description: 'Quant Concept + 10 problems.',
+      summary: 'Study: Quant Selective & Hard Topics',
+      description: 'Quant: Selective concept study + 10 hard problems (weak areas only).',
       start: '2026-06-18T19:00:00',
       end: '2026-06-18T21:30:00'
     },
     {
-      summary: 'Study: Verbal: CAT VA & GMAT CR',
-      description: 'Verbal: CAT VA + GMAT CR.',
+      summary: 'Study: Verbal Timed Sets & Drills',
+      description: 'Verbal: Timed sets (RC passages + CR) speed drills.',
       start: '2026-06-19T19:00:00',
       end: '2026-06-19T21:30:00'
     },
     {
-      summary: 'Study: Data/Logic Sets & Quant Test',
-      description: 'Data/Logic sets + quant topic test + weak areas.',
+      summary: 'Study: DILR Sets & Verbal Test',
+      description: 'DILR timed sets + Verbal topic test + detailed error log analysis.',
       start: '2026-06-20T14:00:00',
       end: '2026-06-20T18:30:00'
     },
     {
-      summary: 'Study: Verbal Test, Mock & Error Log',
-      description: 'Verbal topic test + weekly mock + error-log update.',
+      summary: 'Study: Mock Exam & Strategy Review',
+      description: 'Weekly Mock test (GMAT/CAT) + QA section review.',
       start: '2026-06-21T10:00:00',
       end: '2026-06-21T14:30:00'
     }

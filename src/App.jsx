@@ -391,13 +391,13 @@ export default function App() {
                   <p className="text-secondary mb-3">Mark off the study slots as you complete them to build consistent momentum.</p>
                   <div className="checklist-container">
                     {[
-                      { key: 'mon_quant', day: 'Monday', text: 'Quant concept study + 10 practice problems' },
-                      { key: 'tue_rc', day: 'Tuesday', text: 'RC passage reading + GMAT Critical Reasoning sets' },
-                      { key: 'wed_di', day: 'Wednesday', text: 'DILR sets (CAT) / GMAT Data Insights exercises' },
-                      { key: 'thu_quant', day: 'Thursday', text: 'Quant concepts drilling + practice workbook' },
-                      { key: 'fri_verbal', day: 'Friday', text: 'Verbal logic drills (CAT Paragraphs + GMAT CR)' },
-                      { key: 'sat_sets', day: 'Saturday', text: 'Extended Quant & Logical Reasoning test analysis' },
-                      { key: 'sun_mock', day: 'Sunday', text: 'Weekly mock test attempt & detailed Error Log update' }
+                      { key: 'mon_verbal', day: 'Monday', text: 'Verbal: Concept Study + RC Passages + Critical Reasoning' },
+                      { key: 'tue_di', day: 'Tuesday', text: 'DILR / GMAT Data Insights (2 sets + analysis)' },
+                      { key: 'wed_verbal', day: 'Wednesday', text: 'Verbal: GMAT CR & CAT Paragraph Logic' },
+                      { key: 'thu_quant', day: 'Thursday', text: 'Quant: Selective Concept Study (weak areas / hard topics only)' },
+                      { key: 'fri_verbal', day: 'Friday', text: 'Verbal: Timed Sets (RC passages + CR) speed drills' },
+                      { key: 'sat_sets', day: 'Saturday', text: 'DILR timed sets + Verbal topic test + detailed analysis' },
+                      { key: 'sun_mock', day: 'Sunday', text: 'Weekly Mock test (GMAT/CAT) + QA section review' }
                     ].map(task => (
                       <div 
                         key={task.key}
@@ -613,15 +613,15 @@ export default function App() {
                   </div>
 
                   <div className="resource-section">
-                    {/* QA Tasks */}
-                    {currentDayObj.quant && currentDayObj.quant.length > 0 && (
+                    {/* VA Plan A & B (Verbal First Priority) */}
+                    {((currentDayObj.vaPlanA && currentDayObj.vaPlanA.length > 0) || (currentDayObj.vaPlanB && currentDayObj.vaPlanB.length > 0)) && (
                       <div className="resource-category-card">
                         <div className="section-title-bar">
-                          <span className="section-tag-name">Quantitative Ability (QA)</span>
+                          <span className="section-tag-name">Verbal Ability (VA)</span>
                         </div>
                         <div className="resource-item-list">
-                          {currentDayObj.quant.map((task, idx) => {
-                            const taskKey = `day_${selectedDay}_qa_${idx}`;
+                          {currentDayObj.vaPlanA && currentDayObj.vaPlanA.map((task, idx) => {
+                            const taskKey = `day_${selectedDay}_va_a_${idx}`;
                             return (
                               <div key={idx} className="resource-item">
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer' }} onClick={() => handleTaskToggle(taskKey)}>
@@ -630,7 +630,23 @@ export default function App() {
                                 </div>
                                 {task.url && (
                                   <a href={task.url} target="_blank" rel="noopener noreferrer" className="link-icon-btn">
-                                    🎥 Lecture URL
+                                    📝 Sectional
+                                  </a>
+                                )}
+                              </div>
+                            );
+                          })}
+                          {currentDayObj.vaPlanB && currentDayObj.vaPlanB.map((task, idx) => {
+                            const taskKey = `day_${selectedDay}_va_b_${idx}`;
+                            return (
+                              <div key={idx} className="resource-item">
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer' }} onClick={() => handleTaskToggle(taskKey)}>
+                                  <div className={`checkbox-custom ${checkedTasks[taskKey] ? 'checked' : ''}`} style={{ flexShrink: 0 }}></div>
+                                  <span style={{ textDecoration: checkedTasks[taskKey] ? 'line-through' : 'none', opacity: checkedTasks[taskKey] ? 0.6 : 1 }}>{task.text}</span>
+                                </div>
+                                {task.url && (
+                                  <a href={task.url} target="_blank" rel="noopener noreferrer" className="link-icon-btn">
+                                    🔗 Link
                                   </a>
                                 )}
                               </div>
@@ -694,15 +710,15 @@ export default function App() {
                       </div>
                     )}
 
-                    {/* VA Plan A & B */}
-                    {((currentDayObj.vaPlanA && currentDayObj.vaPlanA.length > 0) || (currentDayObj.vaPlanB && currentDayObj.vaPlanB.length > 0)) && (
+                    {/* QA Tasks (Math Last Priority) */}
+                    {currentDayObj.quant && currentDayObj.quant.length > 0 && (
                       <div className="resource-category-card">
                         <div className="section-title-bar">
-                          <span className="section-tag-name">Verbal Ability (VA)</span>
+                          <span className="section-tag-name">Quantitative Ability (QA)</span>
                         </div>
                         <div className="resource-item-list">
-                          {currentDayObj.vaPlanA && currentDayObj.vaPlanA.map((task, idx) => {
-                            const taskKey = `day_${selectedDay}_va_a_${idx}`;
+                          {currentDayObj.quant.map((task, idx) => {
+                            const taskKey = `day_${selectedDay}_qa_${idx}`;
                             return (
                               <div key={idx} className="resource-item">
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer' }} onClick={() => handleTaskToggle(taskKey)}>
@@ -711,23 +727,7 @@ export default function App() {
                                 </div>
                                 {task.url && (
                                   <a href={task.url} target="_blank" rel="noopener noreferrer" className="link-icon-btn">
-                                    📝 Sectional
-                                  </a>
-                                )}
-                              </div>
-                            );
-                          })}
-                          {currentDayObj.vaPlanB && currentDayObj.vaPlanB.map((task, idx) => {
-                            const taskKey = `day_${selectedDay}_va_b_${idx}`;
-                            return (
-                              <div key={idx} className="resource-item">
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', cursor: 'pointer' }} onClick={() => handleTaskToggle(taskKey)}>
-                                  <div className={`checkbox-custom ${checkedTasks[taskKey] ? 'checked' : ''}`} style={{ flexShrink: 0 }}></div>
-                                  <span style={{ textDecoration: checkedTasks[taskKey] ? 'line-through' : 'none', opacity: checkedTasks[taskKey] ? 0.6 : 1 }}>{task.text}</span>
-                                </div>
-                                {task.url && (
-                                  <a href={task.url} target="_blank" rel="noopener noreferrer" className="link-icon-btn">
-                                    🔗 Link
+                                    🎥 Lecture URL
                                   </a>
                                 )}
                               </div>
