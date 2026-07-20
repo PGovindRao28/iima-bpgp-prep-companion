@@ -414,7 +414,7 @@ export default function App() {
                     ))}
                     {/* PDF local references quick links */}
                     <a 
-                      href="file:///d:/IIM A/Study Material/GDPI-Handbook.pdf" 
+                      href="/api/study-material/GDPI-Handbook.pdf" 
                       className="checklist-item" 
                       style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.75rem' }}
                     >
@@ -425,7 +425,7 @@ export default function App() {
                       </div>
                     </a>
                     <a 
-                      href="file:///d:/IIM A/Study Material/All-Geometery-Shortcuts-by-Quantifiers-CAT-Academy.pdf" 
+                      href="/api/study-material/All-Geometery-Shortcuts-by-Quantifiers-CAT-Academy.pdf" 
                       className="checklist-item" 
                       style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.75rem' }}
                     >
@@ -1052,7 +1052,7 @@ export default function App() {
                       </p>
 
                       <a 
-                        href={`file:///d:/IIM A/Study Material/${pdf.filename}`}
+                        href={`/api/study-material/${pdf.filename}`}
                         className="btn btn-secondary" 
                         style={{ textDecoration: 'none', display: 'flex', justifyContent: 'center', padding: '0.5rem', fontSize: '0.9rem' }}
                       >

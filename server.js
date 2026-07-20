@@ -14,6 +14,9 @@ app.use(express.json());
 // Serve static assets from Vite build in production
 app.use(express.static(path.join(__dirname, 'dist')));
 
+// Serve PDF and notes resources from the Study Material directory
+app.use('/api/study-material', express.static(path.join(__dirname, 'Study Material')));
+
 const SYSTEM_INSTRUCTION = `You are the IIMA BPGP 2027 Study Companion, an AI tutor and preparation assistant dedicated to helping the user gain admission to the Blended Post Graduate Programme (BPGP) at IIM Ahmedabad for the 2027 cohort.
 
 Here is the user's customized study plan:
